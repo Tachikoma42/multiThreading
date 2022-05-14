@@ -1,0 +1,2104 @@
+        -:    0:Source:C:/Users/xkzmx/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.6777.58/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/complex
+        -:    0:Graph:C:\Users\xkzmx\Documents\Odyssey\School\Thread\FFT\cmake-build-debug-coverage\CMakeFiles\FFT.dir\Source.cpp.gcno
+        -:    0:Data:C:\Users\xkzmx\Documents\Odyssey\School\Thread\FFT\cmake-build-debug-coverage\CMakeFiles\FFT.dir\Source.cpp.gcda
+        -:    0:Runs:1
+        -:    1:// The template and inlines for the -*- C++ -*- complex number classes.
+        -:    2:
+        -:    3:// Copyright (C) 1997-2021 Free Software Foundation, Inc.
+        -:    4://
+        -:    5:// This file is part of the GNU ISO C++ Library.  This library is free
+        -:    6:// software; you can redistribute it and/or modify it under the
+        -:    7:// terms of the GNU General Public License as published by the
+        -:    8:// Free Software Foundation; either version 3, or (at your option)
+        -:    9:// any later version.
+        -:   10:
+        -:   11:// This library is distributed in the hope that it will be useful,
+        -:   12:// but WITHOUT ANY WARRANTY; without even the implied warranty of
+        -:   13:// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        -:   14:// GNU General Public License for more details.
+        -:   15:
+        -:   16:// Under Section 7 of GPL version 3, you are granted additional
+        -:   17:// permissions described in the GCC Runtime Library Exception, version
+        -:   18:// 3.1, as published by the Free Software Foundation.
+        -:   19:
+        -:   20:// You should have received a copy of the GNU General Public License and
+        -:   21:// a copy of the GCC Runtime Library Exception along with this program;
+        -:   22:// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+        -:   23:// <http://www.gnu.org/licenses/>.
+        -:   24:
+        -:   25:/** @file include/complex
+        -:   26: *  This is a Standard C++ Library header.
+        -:   27: */
+        -:   28:
+        -:   29://
+        -:   30:// ISO C++ 14882: 26.2  Complex Numbers
+        -:   31:// Note: this is not a conforming implementation.
+        -:   32:// Initially implemented by Ulrich Drepper <drepper@cygnus.com>
+        -:   33:// Improved by Gabriel Dos Reis <dosreis@cmla.ens-cachan.fr>
+        -:   34://
+        -:   35:
+        -:   36:#ifndef _GLIBCXX_COMPLEX
+        -:   37:#define _GLIBCXX_COMPLEX 1
+        -:   38:
+        -:   39:#pragma GCC system_header
+        -:   40:
+        -:   41:#include <bits/c++config.h>
+        -:   42:#include <bits/cpp_type_traits.h>
+        -:   43:#include <ext/type_traits.h>
+        -:   44:#include <cmath>
+        -:   45:#include <sstream>
+        -:   46:
+        -:   47:// Get rid of a macro possibly defined in <complex.h>
+        -:   48:#undef complex
+        -:   49:
+        -:   50:#if __cplusplus > 201703L
+        -:   51:# define __cpp_lib_constexpr_complex 201711L
+        -:   52:#endif
+        -:   53:
+        -:   54:namespace std _GLIBCXX_VISIBILITY(default)
+        -:   55:{
+        -:   56:_GLIBCXX_BEGIN_NAMESPACE_VERSION
+        -:   57:
+        -:   58:  /**
+        -:   59:   * @defgroup complex_numbers Complex Numbers
+        -:   60:   * @ingroup numerics
+        -:   61:   *
+        -:   62:   * Classes and functions for complex numbers.
+        -:   63:   * @{
+        -:   64:   */
+        -:   65:
+        -:   66:  // Forward declarations.
+        -:   67:  template<typename _Tp> class complex;
+        -:   68:  template<> class complex<float>;
+        -:   69:  template<> class complex<double>;
+        -:   70:  template<> class complex<long double>;
+        -:   71:
+        -:   72:  ///  Return magnitude of @a z.
+        -:   73:  template<typename _Tp> _Tp abs(const complex<_Tp>&);
+        -:   74:  ///  Return phase angle of @a z.
+        -:   75:  template<typename _Tp> _Tp arg(const complex<_Tp>&);
+        -:   76:  ///  Return @a z magnitude squared.
+        -:   77:  template<typename _Tp> _Tp _GLIBCXX20_CONSTEXPR norm(const complex<_Tp>&);
+        -:   78:
+        -:   79:  ///  Return complex conjugate of @a z.
+        -:   80:  template<typename _Tp>
+        -:   81:    _GLIBCXX20_CONSTEXPR complex<_Tp> conj(const complex<_Tp>&);
+        -:   82:  ///  Return complex with magnitude @a rho and angle @a theta.
+        -:   83:  template<typename _Tp> complex<_Tp> polar(const _Tp&, const _Tp& = 0);
+        -:   84:
+        -:   85:  // Transcendentals:
+        -:   86:  /// Return complex cosine of @a z.
+        -:   87:  template<typename _Tp> complex<_Tp> cos(const complex<_Tp>&);
+        -:   88:  /// Return complex hyperbolic cosine of @a z.
+        -:   89:  template<typename _Tp> complex<_Tp> cosh(const complex<_Tp>&);
+        -:   90:  /// Return complex base e exponential of @a z.
+        -:   91:  template<typename _Tp> complex<_Tp> exp(const complex<_Tp>&);
+        -:   92:  /// Return complex natural logarithm of @a z.
+        -:   93:  template<typename _Tp> complex<_Tp> log(const complex<_Tp>&);
+        -:   94:  /// Return complex base 10 logarithm of @a z.
+        -:   95:  template<typename _Tp> complex<_Tp> log10(const complex<_Tp>&);
+        -:   96:  /// Return @a x to the @a y'th power.
+        -:   97:  template<typename _Tp> complex<_Tp> pow(const complex<_Tp>&, int);
+        -:   98:  /// Return @a x to the @a y'th power.
+        -:   99:  template<typename _Tp> complex<_Tp> pow(const complex<_Tp>&, const _Tp&);
+        -:  100:  /// Return @a x to the @a y'th power.
+        -:  101:  template<typename _Tp> complex<_Tp> pow(const complex<_Tp>&,
+        -:  102:                                          const complex<_Tp>&);
+        -:  103:  /// Return @a x to the @a y'th power.
+        -:  104:  template<typename _Tp> complex<_Tp> pow(const _Tp&, const complex<_Tp>&);
+        -:  105:  /// Return complex sine of @a z.
+        -:  106:  template<typename _Tp> complex<_Tp> sin(const complex<_Tp>&);
+        -:  107:  /// Return complex hyperbolic sine of @a z.
+        -:  108:  template<typename _Tp> complex<_Tp> sinh(const complex<_Tp>&);
+        -:  109:  /// Return complex square root of @a z.
+        -:  110:  template<typename _Tp> complex<_Tp> sqrt(const complex<_Tp>&);
+        -:  111:  /// Return complex tangent of @a z.
+        -:  112:  template<typename _Tp> complex<_Tp> tan(const complex<_Tp>&);
+        -:  113:  /// Return complex hyperbolic tangent of @a z.
+        -:  114:  template<typename _Tp> complex<_Tp> tanh(const complex<_Tp>&);
+        -:  115:
+        -:  116:
+        -:  117:  // 26.2.2  Primary template class complex
+        -:  118:  /**
+        -:  119:   *  Template to represent complex numbers.
+        -:  120:   *
+        -:  121:   *  Specializations for float, double, and long double are part of the
+        -:  122:   *  library.  Results with any other type are not guaranteed.
+        -:  123:   *
+        -:  124:   *  @param  Tp  Type of real and imaginary values.
+        -:  125:  */
+        -:  126:  template<typename _Tp>
+        -:  127:    class complex
+        -:  128:    {
+        -:  129:    public:
+        -:  130:      /// Value typedef.
+        -:  131:      typedef _Tp value_type;
+        -:  132:
+        -:  133:      ///  Default constructor.  First parameter is x, second parameter is y.
+        -:  134:      ///  Unspecified parameters default to 0.
+        -:  135:      _GLIBCXX_CONSTEXPR complex(const _Tp& __r = _Tp(), const _Tp& __i = _Tp())
+        -:  136:      : _M_real(__r), _M_imag(__i) { }
+        -:  137:
+        -:  138:      // Let the compiler synthesize the copy constructor
+        -:  139:#if __cplusplus >= 201103L
+        -:  140:      constexpr complex(const complex&) = default;
+        -:  141:#endif
+        -:  142:
+        -:  143:      ///  Converting constructor.
+        -:  144:      template<typename _Up>
+        -:  145:        _GLIBCXX_CONSTEXPR complex(const complex<_Up>& __z)
+        -:  146:	: _M_real(__z.real()), _M_imag(__z.imag()) { }
+        -:  147:
+        -:  148:#if __cplusplus >= 201103L
+        -:  149:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+        -:  150:      // DR 387. std::complex over-encapsulated.
+        -:  151:      _GLIBCXX_ABI_TAG_CXX11
+        -:  152:      constexpr _Tp
+        -:  153:      real() const { return _M_real; }
+        -:  154:
+        -:  155:      _GLIBCXX_ABI_TAG_CXX11
+        -:  156:      constexpr _Tp
+        -:  157:      imag() const { return _M_imag; }
+        -:  158:#else
+        -:  159:      ///  Return real part of complex number.
+        -:  160:      _Tp&
+        -:  161:      real() { return _M_real; }
+        -:  162:
+        -:  163:      ///  Return real part of complex number.
+        -:  164:      const _Tp&
+        -:  165:      real() const { return _M_real; }
+        -:  166:
+        -:  167:      ///  Return imaginary part of complex number.
+        -:  168:      _Tp&
+        -:  169:      imag() { return _M_imag; }
+        -:  170:
+        -:  171:      ///  Return imaginary part of complex number.
+        -:  172:      const _Tp&
+        -:  173:      imag() const { return _M_imag; }
+        -:  174:#endif
+        -:  175:
+        -:  176:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+        -:  177:      // DR 387. std::complex over-encapsulated.
+        -:  178:      _GLIBCXX20_CONSTEXPR void
+        -:  179:      real(_Tp __val) { _M_real = __val; }
+        -:  180:
+        -:  181:      _GLIBCXX20_CONSTEXPR void
+        -:  182:      imag(_Tp __val) { _M_imag = __val; }
+        -:  183:
+        -:  184:      /// Assign a scalar to this complex number.
+        -:  185:      _GLIBCXX20_CONSTEXPR complex<_Tp>& operator=(const _Tp&);
+        -:  186:
+        -:  187:      /// Add a scalar to this complex number.
+        -:  188:      // 26.2.5/1
+        -:  189:      _GLIBCXX20_CONSTEXPR complex<_Tp>&
+        -:  190:      operator+=(const _Tp& __t)
+        -:  191:      {
+        -:  192:	_M_real += __t;
+        -:  193:	return *this;
+        -:  194:      }
+        -:  195:
+        -:  196:      /// Subtract a scalar from this complex number.
+        -:  197:      // 26.2.5/3
+        -:  198:      _GLIBCXX20_CONSTEXPR complex<_Tp>&
+        -:  199:      operator-=(const _Tp& __t)
+        -:  200:      {
+        -:  201:	_M_real -= __t;
+        -:  202:	return *this;
+        -:  203:      }
+        -:  204:
+        -:  205:      /// Multiply this complex number by a scalar.
+        -:  206:      _GLIBCXX20_CONSTEXPR complex<_Tp>& operator*=(const _Tp&);
+        -:  207:      /// Divide this complex number by a scalar.
+        -:  208:      _GLIBCXX20_CONSTEXPR complex<_Tp>& operator/=(const _Tp&);
+        -:  209:
+        -:  210:      // Let the compiler synthesize the copy assignment operator
+        -:  211:#if __cplusplus >= 201103L
+        -:  212:      _GLIBCXX20_CONSTEXPR complex& operator=(const complex&) = default;
+        -:  213:#endif
+        -:  214:
+        -:  215:      /// Assign another complex number to this one.
+        -:  216:      template<typename _Up>
+        -:  217:        _GLIBCXX20_CONSTEXPR complex<_Tp>& operator=(const complex<_Up>&);
+        -:  218:      /// Add another complex number to this one.
+        -:  219:      template<typename _Up>
+        -:  220:        _GLIBCXX20_CONSTEXPR complex<_Tp>& operator+=(const complex<_Up>&);
+        -:  221:      /// Subtract another complex number from this one.
+        -:  222:      template<typename _Up>
+        -:  223:        _GLIBCXX20_CONSTEXPR complex<_Tp>& operator-=(const complex<_Up>&);
+        -:  224:      /// Multiply this complex number by another.
+        -:  225:      template<typename _Up>
+        -:  226:        _GLIBCXX20_CONSTEXPR complex<_Tp>& operator*=(const complex<_Up>&);
+        -:  227:      /// Divide this complex number by another.
+        -:  228:      template<typename _Up>
+        -:  229:        _GLIBCXX20_CONSTEXPR complex<_Tp>& operator/=(const complex<_Up>&);
+        -:  230:
+        -:  231:      _GLIBCXX_CONSTEXPR complex __rep() const
+        -:  232:      { return *this; }
+        -:  233:
+        -:  234:    private:
+        -:  235:      _Tp _M_real;
+        -:  236:      _Tp _M_imag;
+        -:  237:    };
+        -:  238:
+        -:  239:  template<typename _Tp>
+        -:  240:    _GLIBCXX20_CONSTEXPR complex<_Tp>&
+        -:  241:    complex<_Tp>::operator=(const _Tp& __t)
+        -:  242:    {
+        -:  243:     _M_real = __t;
+        -:  244:     _M_imag = _Tp();
+        -:  245:     return *this;
+        -:  246:    }
+        -:  247:
+        -:  248:  // 26.2.5/5
+        -:  249:  template<typename _Tp>
+        -:  250:    _GLIBCXX20_CONSTEXPR complex<_Tp>&
+        -:  251:    complex<_Tp>::operator*=(const _Tp& __t)
+        -:  252:    {
+        -:  253:      _M_real *= __t;
+        -:  254:      _M_imag *= __t;
+        -:  255:      return *this;
+        -:  256:    }
+        -:  257:
+        -:  258:  // 26.2.5/7
+        -:  259:  template<typename _Tp>
+        -:  260:    _GLIBCXX20_CONSTEXPR complex<_Tp>&
+        -:  261:    complex<_Tp>::operator/=(const _Tp& __t)
+        -:  262:    {
+        -:  263:      _M_real /= __t;
+        -:  264:      _M_imag /= __t;
+        -:  265:      return *this;
+        -:  266:    }
+        -:  267:
+        -:  268:  template<typename _Tp>
+        -:  269:    template<typename _Up>
+        -:  270:    _GLIBCXX20_CONSTEXPR complex<_Tp>&
+        -:  271:    complex<_Tp>::operator=(const complex<_Up>& __z)
+        -:  272:    {
+        -:  273:      _M_real = __z.real();
+        -:  274:      _M_imag = __z.imag();
+        -:  275:      return *this;
+        -:  276:    }
+        -:  277:
+        -:  278:  // 26.2.5/9
+        -:  279:  template<typename _Tp>
+        -:  280:    template<typename _Up>
+        -:  281:    _GLIBCXX20_CONSTEXPR complex<_Tp>&
+        -:  282:    complex<_Tp>::operator+=(const complex<_Up>& __z)
+        -:  283:    {
+        -:  284:      _M_real += __z.real();
+        -:  285:      _M_imag += __z.imag();
+        -:  286:      return *this;
+        -:  287:    }
+        -:  288:
+        -:  289:  // 26.2.5/11
+        -:  290:  template<typename _Tp>
+        -:  291:    template<typename _Up>
+        -:  292:    _GLIBCXX20_CONSTEXPR complex<_Tp>&
+        -:  293:    complex<_Tp>::operator-=(const complex<_Up>& __z)
+        -:  294:    {
+        -:  295:      _M_real -= __z.real();
+        -:  296:      _M_imag -= __z.imag();
+        -:  297:      return *this;
+        -:  298:    }
+        -:  299:
+        -:  300:  // 26.2.5/13
+        -:  301:  // XXX: This is a grammar school implementation.
+        -:  302:  template<typename _Tp>
+        -:  303:    template<typename _Up>
+        -:  304:    _GLIBCXX20_CONSTEXPR complex<_Tp>&
+        -:  305:    complex<_Tp>::operator*=(const complex<_Up>& __z)
+        -:  306:    {
+        -:  307:      const _Tp __r = _M_real * __z.real() - _M_imag * __z.imag();
+        -:  308:      _M_imag = _M_real * __z.imag() + _M_imag * __z.real();
+        -:  309:      _M_real = __r;
+        -:  310:      return *this;
+        -:  311:    }
+        -:  312:
+        -:  313:  // 26.2.5/15
+        -:  314:  // XXX: This is a grammar school implementation.
+        -:  315:  template<typename _Tp>
+        -:  316:    template<typename _Up>
+        -:  317:    _GLIBCXX20_CONSTEXPR complex<_Tp>&
+        -:  318:    complex<_Tp>::operator/=(const complex<_Up>& __z)
+        -:  319:    {
+        -:  320:      const _Tp __r =  _M_real * __z.real() + _M_imag * __z.imag();
+        -:  321:      const _Tp __n = std::norm(__z);
+        -:  322:      _M_imag = (_M_imag * __z.real() - _M_real * __z.imag()) / __n;
+        -:  323:      _M_real = __r / __n;
+        -:  324:      return *this;
+        -:  325:    }
+        -:  326:
+        -:  327:  // Operators:
+        -:  328:  ///@{
+        -:  329:  ///  Return new complex value @a x plus @a y.
+        -:  330:  template<typename _Tp>
+        -:  331:    inline _GLIBCXX20_CONSTEXPR complex<_Tp>
+function _ZStplIdESt7complexIT_ERKS2_S4_ called 24 returned 100% blocks executed 100%
+       24:  332:    operator+(const complex<_Tp>& __x, const complex<_Tp>& __y)
+        -:  333:    {
+       24:  334:      complex<_Tp> __r = __x;
+       24:  335:      __r += __y;
+       24:  335-block  0
+call    0 returned 24
+       24:  336:      return __r;
+        -:  337:    }
+        -:  338:
+        -:  339:  template<typename _Tp>
+        -:  340:    inline _GLIBCXX20_CONSTEXPR complex<_Tp>
+        -:  341:    operator+(const complex<_Tp>& __x, const _Tp& __y)
+        -:  342:    {
+        -:  343:      complex<_Tp> __r = __x;
+        -:  344:      __r += __y;
+        -:  345:      return __r;
+        -:  346:    }
+        -:  347:
+        -:  348:  template<typename _Tp>
+        -:  349:    inline _GLIBCXX20_CONSTEXPR complex<_Tp>
+        -:  350:    operator+(const _Tp& __x, const complex<_Tp>& __y)
+        -:  351:    {
+        -:  352:      complex<_Tp> __r = __y;
+        -:  353:      __r += __x;
+        -:  354:      return __r;
+        -:  355:    }
+        -:  356:  ///@}
+        -:  357:
+        -:  358:  ///@{
+        -:  359:  ///  Return new complex value @a x minus @a y.
+        -:  360:  template<typename _Tp>
+        -:  361:    inline _GLIBCXX20_CONSTEXPR complex<_Tp>
+        -:  362:    operator-(const complex<_Tp>& __x, const complex<_Tp>& __y)
+        -:  363:    {
+        -:  364:      complex<_Tp> __r = __x;
+        -:  365:      __r -= __y;
+        -:  366:      return __r;
+        -:  367:    }
+        -:  368:
+        -:  369:  template<typename _Tp>
+        -:  370:    inline _GLIBCXX20_CONSTEXPR complex<_Tp>
+        -:  371:    operator-(const complex<_Tp>& __x, const _Tp& __y)
+        -:  372:    {
+        -:  373:      complex<_Tp> __r = __x;
+        -:  374:      __r -= __y;
+        -:  375:      return __r;
+        -:  376:    }
+        -:  377:
+        -:  378:  template<typename _Tp>
+        -:  379:    inline _GLIBCXX20_CONSTEXPR complex<_Tp>
+        -:  380:    operator-(const _Tp& __x, const complex<_Tp>& __y)
+        -:  381:    {
+        -:  382:      complex<_Tp> __r = -__y;
+        -:  383:      __r += __x;
+        -:  384:      return __r;
+        -:  385:    }
+        -:  386:  ///@}
+        -:  387:
+        -:  388:  ///@{
+        -:  389:  ///  Return new complex value @a x times @a y.
+        -:  390:  template<typename _Tp>
+        -:  391:    inline _GLIBCXX20_CONSTEXPR complex<_Tp>
+        -:  392:    operator*(const complex<_Tp>& __x, const complex<_Tp>& __y)
+        -:  393:    {
+        -:  394:      complex<_Tp> __r = __x;
+        -:  395:      __r *= __y;
+        -:  396:      return __r;
+        -:  397:    }
+        -:  398:
+        -:  399:  template<typename _Tp>
+        -:  400:    inline _GLIBCXX20_CONSTEXPR complex<_Tp>
+function _ZStmlIdESt7complexIT_ERKS2_RKS1_ called 3 returned 100% blocks executed 100%
+        3:  401:    operator*(const complex<_Tp>& __x, const _Tp& __y)
+        -:  402:    {
+        3:  403:      complex<_Tp> __r = __x;
+        3:  404:      __r *= __y;
+        3:  404-block  0
+call    0 returned 3
+        3:  405:      return __r;
+        -:  406:    }
+        -:  407:
+        -:  408:  template<typename _Tp>
+        -:  409:    inline _GLIBCXX20_CONSTEXPR complex<_Tp>
+function _ZStmlIdESt7complexIT_ERKS1_RKS2_ called 12 returned 100% blocks executed 100%
+       12:  410:    operator*(const _Tp& __x, const complex<_Tp>& __y)
+        -:  411:    {
+       12:  412:      complex<_Tp> __r = __y;
+       12:  413:      __r *= __x;
+       12:  413-block  0
+call    0 returned 12
+       12:  414:      return __r;
+        -:  415:    }
+        -:  416:  ///@}
+        -:  417:
+        -:  418:  ///@{
+        -:  419:  ///  Return new complex value @a x divided by @a y.
+        -:  420:  template<typename _Tp>
+        -:  421:    inline _GLIBCXX20_CONSTEXPR complex<_Tp>
+function _ZStdvIdESt7complexIT_ERKS2_S4_ called 0 returned 0% blocks executed 0%
+    #####:  422:    operator/(const complex<_Tp>& __x, const complex<_Tp>& __y)
+        -:  423:    {
+    #####:  424:      complex<_Tp> __r = __x;
+    #####:  425:      __r /= __y;
+    %%%%%:  425-block  0
+call    0 never executed
+    #####:  426:      return __r;
+        -:  427:    }
+        -:  428:
+        -:  429:  template<typename _Tp>
+        -:  430:    inline _GLIBCXX20_CONSTEXPR complex<_Tp>
+        -:  431:    operator/(const complex<_Tp>& __x, const _Tp& __y)
+        -:  432:    {
+        -:  433:      complex<_Tp> __r = __x;
+        -:  434:      __r /= __y;
+        -:  435:      return __r;
+        -:  436:    }
+        -:  437:
+        -:  438:  template<typename _Tp>
+        -:  439:    inline _GLIBCXX20_CONSTEXPR complex<_Tp>
+        -:  440:    operator/(const _Tp& __x, const complex<_Tp>& __y)
+        -:  441:    {
+        -:  442:      complex<_Tp> __r = __x;
+        -:  443:      __r /= __y;
+        -:  444:      return __r;
+        -:  445:    }
+        -:  446:  ///@}
+        -:  447:
+        -:  448:  ///  Return @a x.
+        -:  449:  template<typename _Tp>
+        -:  450:    inline _GLIBCXX20_CONSTEXPR complex<_Tp>
+        -:  451:    operator+(const complex<_Tp>& __x)
+        -:  452:    { return __x; }
+        -:  453:
+        -:  454:  ///  Return complex negation of @a x.
+        -:  455:  template<typename _Tp>
+        -:  456:    inline _GLIBCXX20_CONSTEXPR complex<_Tp>
+function _ZStngIdESt7complexIT_ERKS2_ called 3 returned 100% blocks executed 100%
+        3:  457:    operator-(const complex<_Tp>& __x)
+        3:  458:    { return complex<_Tp>(-__x.real(), -__x.imag()); }
+        3:  458-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+        -:  459:
+        -:  460:  ///@{
+        -:  461:  ///  Return true if @a x is equal to @a y.
+        -:  462:  template<typename _Tp>
+        -:  463:    inline _GLIBCXX_CONSTEXPR bool
+        -:  464:    operator==(const complex<_Tp>& __x, const complex<_Tp>& __y)
+        -:  465:    { return __x.real() == __y.real() && __x.imag() == __y.imag(); }
+        -:  466:
+        -:  467:  template<typename _Tp>
+        -:  468:    inline _GLIBCXX_CONSTEXPR bool
+        -:  469:    operator==(const complex<_Tp>& __x, const _Tp& __y)
+        -:  470:    { return __x.real() == __y && __x.imag() == _Tp(); }
+        -:  471:
+        -:  472:#if !(__cpp_impl_three_way_comparison >= 201907L)
+        -:  473:  template<typename _Tp>
+        -:  474:    inline _GLIBCXX_CONSTEXPR bool
+        -:  475:    operator==(const _Tp& __x, const complex<_Tp>& __y)
+        -:  476:    { return __x == __y.real() && _Tp() == __y.imag(); }
+        -:  477:  ///@}
+        -:  478:
+        -:  479:  ///@{
+        -:  480:  ///  Return false if @a x is equal to @a y.
+        -:  481:  template<typename _Tp>
+        -:  482:    inline _GLIBCXX_CONSTEXPR bool
+        -:  483:    operator!=(const complex<_Tp>& __x, const complex<_Tp>& __y)
+        -:  484:    { return __x.real() != __y.real() || __x.imag() != __y.imag(); }
+        -:  485:
+        -:  486:  template<typename _Tp>
+        -:  487:    inline _GLIBCXX_CONSTEXPR bool
+        -:  488:    operator!=(const complex<_Tp>& __x, const _Tp& __y)
+        -:  489:    { return __x.real() != __y || __x.imag() != _Tp(); }
+        -:  490:
+        -:  491:  template<typename _Tp>
+        -:  492:    inline _GLIBCXX_CONSTEXPR bool
+        -:  493:    operator!=(const _Tp& __x, const complex<_Tp>& __y)
+        -:  494:    { return __x != __y.real() || _Tp() != __y.imag(); }
+        -:  495:#endif
+        -:  496:  ///@}
+        -:  497:
+        -:  498:  ///  Extraction operator for complex values.
+        -:  499:  template<typename _Tp, typename _CharT, class _Traits>
+        -:  500:    basic_istream<_CharT, _Traits>&
+        -:  501:    operator>>(basic_istream<_CharT, _Traits>& __is, complex<_Tp>& __x)
+        -:  502:    {
+        -:  503:      bool __fail = true;
+        -:  504:      _CharT __ch;
+        -:  505:      if (__is >> __ch)
+        -:  506:	{
+        -:  507:	  if (_Traits::eq(__ch, __is.widen('(')))
+        -:  508:	    {
+        -:  509:	      _Tp __u;
+        -:  510:	      if (__is >> __u >> __ch)
+        -:  511:		{
+        -:  512:		  const _CharT __rparen = __is.widen(')');
+        -:  513:		  if (_Traits::eq(__ch, __rparen))
+        -:  514:		    {
+        -:  515:		      __x = __u;
+        -:  516:		      __fail = false;
+        -:  517:		    }
+        -:  518:		  else if (_Traits::eq(__ch, __is.widen(',')))
+        -:  519:		    {
+        -:  520:		      _Tp __v;
+        -:  521:		      if (__is >> __v >> __ch)
+        -:  522:			{
+        -:  523:			  if (_Traits::eq(__ch, __rparen))
+        -:  524:			    {
+        -:  525:			      __x = complex<_Tp>(__u, __v);
+        -:  526:			      __fail = false;
+        -:  527:			    }
+        -:  528:			  else
+        -:  529:			    __is.putback(__ch);
+        -:  530:			}
+        -:  531:		    }
+        -:  532:		  else
+        -:  533:		    __is.putback(__ch);
+        -:  534:		}
+        -:  535:	    }
+        -:  536:	  else
+        -:  537:	    {
+        -:  538:	      __is.putback(__ch);
+        -:  539:	      _Tp __u;
+        -:  540:	      if (__is >> __u)
+        -:  541:		{
+        -:  542:		  __x = __u;
+        -:  543:		  __fail = false;
+        -:  544:		}
+        -:  545:	    }
+        -:  546:	}
+        -:  547:      if (__fail)
+        -:  548:	__is.setstate(ios_base::failbit);
+        -:  549:      return __is;
+        -:  550:    }
+        -:  551:
+        -:  552:  ///  Insertion operator for complex values.
+        -:  553:  template<typename _Tp, typename _CharT, class _Traits>
+        -:  554:    basic_ostream<_CharT, _Traits>&
+        -:  555:    operator<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
+        -:  556:    {
+        -:  557:      basic_ostringstream<_CharT, _Traits> __s;
+        -:  558:      __s.flags(__os.flags());
+        -:  559:      __s.imbue(__os.getloc());
+        -:  560:      __s.precision(__os.precision());
+        -:  561:      __s << '(' << __x.real() << ',' << __x.imag() << ')';
+        -:  562:      return __os << __s.str();
+        -:  563:    }
+        -:  564:
+        -:  565:  // Values
+        -:  566:#if __cplusplus >= 201103L
+        -:  567:  template<typename _Tp>
+        -:  568:    constexpr _Tp
+        -:  569:    real(const complex<_Tp>& __z)
+        -:  570:    { return __z.real(); }
+        -:  571:
+        -:  572:  template<typename _Tp>
+        -:  573:    constexpr _Tp
+        -:  574:    imag(const complex<_Tp>& __z)
+        -:  575:    { return __z.imag(); }
+        -:  576:#else
+        -:  577:  template<typename _Tp>
+        -:  578:    inline _Tp&
+        -:  579:    real(complex<_Tp>& __z)
+        -:  580:    { return __z.real(); }
+        -:  581:
+        -:  582:  template<typename _Tp>
+        -:  583:    inline const _Tp&
+        -:  584:    real(const complex<_Tp>& __z)
+        -:  585:    { return __z.real(); }
+        -:  586:
+        -:  587:  template<typename _Tp>
+        -:  588:    inline _Tp&
+        -:  589:    imag(complex<_Tp>& __z)
+        -:  590:    { return __z.imag(); }
+        -:  591:
+        -:  592:  template<typename _Tp>
+        -:  593:    inline const _Tp&
+        -:  594:    imag(const complex<_Tp>& __z)
+        -:  595:    { return __z.imag(); }
+        -:  596:#endif
+        -:  597:
+        -:  598:  // 26.2.7/3 abs(__z):  Returns the magnitude of __z.
+        -:  599:  template<typename _Tp>
+        -:  600:    inline _Tp
+        -:  601:    __complex_abs(const complex<_Tp>& __z)
+        -:  602:    {
+        -:  603:      _Tp __x = __z.real();
+        -:  604:      _Tp __y = __z.imag();
+        -:  605:      const _Tp __s = std::max(abs(__x), abs(__y));
+        -:  606:      if (__s == _Tp())  // well ...
+        -:  607:        return __s;
+        -:  608:      __x /= __s;
+        -:  609:      __y /= __s;
+        -:  610:      return __s * sqrt(__x * __x + __y * __y);
+        -:  611:    }
+        -:  612:
+        -:  613:#if _GLIBCXX_USE_C99_COMPLEX
+        -:  614:  inline float
+        -:  615:  __complex_abs(__complex__ float __z) { return __builtin_cabsf(__z); }
+        -:  616:
+        -:  617:  inline double
+        -:  618:  __complex_abs(__complex__ double __z) { return __builtin_cabs(__z); }
+        -:  619:
+        -:  620:  inline long double
+        -:  621:  __complex_abs(const __complex__ long double& __z)
+        -:  622:  { return __builtin_cabsl(__z); }
+        -:  623:
+        -:  624:  template<typename _Tp>
+        -:  625:    inline _Tp
+        -:  626:    abs(const complex<_Tp>& __z) { return __complex_abs(__z.__rep()); }
+        -:  627:#else
+        -:  628:  template<typename _Tp>
+        -:  629:    inline _Tp
+        -:  630:    abs(const complex<_Tp>& __z) { return __complex_abs(__z); }
+        -:  631:#endif
+        -:  632:
+        -:  633:
+        -:  634:  // 26.2.7/4: arg(__z): Returns the phase angle of __z.
+        -:  635:  template<typename _Tp>
+        -:  636:    inline _Tp
+        -:  637:    __complex_arg(const complex<_Tp>& __z)
+        -:  638:    { return  atan2(__z.imag(), __z.real()); }
+        -:  639:
+        -:  640:#if _GLIBCXX_USE_C99_COMPLEX
+        -:  641:  inline float
+        -:  642:  __complex_arg(__complex__ float __z) { return __builtin_cargf(__z); }
+        -:  643:
+        -:  644:  inline double
+        -:  645:  __complex_arg(__complex__ double __z) { return __builtin_carg(__z); }
+        -:  646:
+        -:  647:  inline long double
+        -:  648:  __complex_arg(const __complex__ long double& __z)
+        -:  649:  { return __builtin_cargl(__z); }
+        -:  650:
+        -:  651:  template<typename _Tp>
+        -:  652:    inline _Tp
+        -:  653:    arg(const complex<_Tp>& __z) { return __complex_arg(__z.__rep()); }
+        -:  654:#else
+        -:  655:  template<typename _Tp>
+        -:  656:    inline _Tp
+        -:  657:    arg(const complex<_Tp>& __z) { return __complex_arg(__z); }
+        -:  658:#endif
+        -:  659:
+        -:  660:  // 26.2.7/5: norm(__z) returns the squared magnitude of __z.
+        -:  661:  //     As defined, norm() is -not- a norm is the common mathematical
+        -:  662:  //     sense used in numerics.  The helper class _Norm_helper<> tries to
+        -:  663:  //     distinguish between builtin floating point and the rest, so as
+        -:  664:  //     to deliver an answer as close as possible to the real value.
+        -:  665:  template<bool>
+        -:  666:    struct _Norm_helper
+        -:  667:    {
+        -:  668:      template<typename _Tp>
+        -:  669:        static inline _GLIBCXX20_CONSTEXPR _Tp _S_do_it(const complex<_Tp>& __z)
+        -:  670:        {
+        -:  671:          const _Tp __x = __z.real();
+        -:  672:          const _Tp __y = __z.imag();
+        -:  673:          return __x * __x + __y * __y;
+        -:  674:        }
+        -:  675:    };
+        -:  676:
+        -:  677:  template<>
+        -:  678:    struct _Norm_helper<true>
+        -:  679:    {
+        -:  680:      template<typename _Tp>
+        -:  681:        static inline _GLIBCXX20_CONSTEXPR _Tp _S_do_it(const complex<_Tp>& __z)
+        -:  682:        {
+        -:  683:          //_Tp __res = std::abs(__z);
+        -:  684:          //return __res * __res;
+        -:  685:          const _Tp __x = __z.real();
+        -:  686:          const _Tp __y = __z.imag();
+        -:  687:          return __x * __x + __y * __y;
+        -:  688:        }
+        -:  689:    };
+        -:  690:
+        -:  691:  template<typename _Tp>
+        -:  692:    inline _GLIBCXX20_CONSTEXPR _Tp
+        -:  693:    norm(const complex<_Tp>& __z)
+        -:  694:    {
+        -:  695:      return _Norm_helper<__is_floating<_Tp>::__value
+        -:  696:	&& !_GLIBCXX_FAST_MATH>::_S_do_it(__z);
+        -:  697:    }
+        -:  698:
+        -:  699:  template<typename _Tp>
+        -:  700:    inline complex<_Tp>
+        -:  701:    polar(const _Tp& __rho, const _Tp& __theta)
+        -:  702:    {
+        -:  703:      __glibcxx_assert( __rho >= 0 );
+        -:  704:      return complex<_Tp>(__rho * cos(__theta), __rho * sin(__theta));
+        -:  705:    }
+        -:  706:
+        -:  707:  template<typename _Tp>
+        -:  708:    inline _GLIBCXX20_CONSTEXPR complex<_Tp>
+        -:  709:    conj(const complex<_Tp>& __z)
+        -:  710:    { return complex<_Tp>(__z.real(), -__z.imag()); }
+        -:  711:
+        -:  712:  // Transcendentals
+        -:  713:
+        -:  714:  // 26.2.8/1 cos(__z):  Returns the cosine of __z.
+        -:  715:  template<typename _Tp>
+        -:  716:    inline complex<_Tp>
+        -:  717:    __complex_cos(const complex<_Tp>& __z)
+        -:  718:    {
+        -:  719:      const _Tp __x = __z.real();
+        -:  720:      const _Tp __y = __z.imag();
+        -:  721:      return complex<_Tp>(cos(__x) * cosh(__y), -sin(__x) * sinh(__y));
+        -:  722:    }
+        -:  723:
+        -:  724:#if _GLIBCXX_USE_C99_COMPLEX
+        -:  725:  inline __complex__ float
+        -:  726:  __complex_cos(__complex__ float __z) { return __builtin_ccosf(__z); }
+        -:  727:
+        -:  728:  inline __complex__ double
+        -:  729:  __complex_cos(__complex__ double __z) { return __builtin_ccos(__z); }
+        -:  730:
+        -:  731:  inline __complex__ long double
+        -:  732:  __complex_cos(const __complex__ long double& __z)
+        -:  733:  { return __builtin_ccosl(__z); }
+        -:  734:
+        -:  735:  template<typename _Tp>
+        -:  736:    inline complex<_Tp>
+        -:  737:    cos(const complex<_Tp>& __z) { return __complex_cos(__z.__rep()); }
+        -:  738:#else
+        -:  739:  template<typename _Tp>
+        -:  740:    inline complex<_Tp>
+        -:  741:    cos(const complex<_Tp>& __z) { return __complex_cos(__z); }
+        -:  742:#endif
+        -:  743:
+        -:  744:  // 26.2.8/2 cosh(__z): Returns the hyperbolic cosine of __z.
+        -:  745:  template<typename _Tp>
+        -:  746:    inline complex<_Tp>
+        -:  747:    __complex_cosh(const complex<_Tp>& __z)
+        -:  748:    {
+        -:  749:      const _Tp __x = __z.real();
+        -:  750:      const _Tp __y = __z.imag();
+        -:  751:      return complex<_Tp>(cosh(__x) * cos(__y), sinh(__x) * sin(__y));
+        -:  752:    }
+        -:  753:
+        -:  754:#if _GLIBCXX_USE_C99_COMPLEX
+        -:  755:  inline __complex__ float
+        -:  756:  __complex_cosh(__complex__ float __z) { return __builtin_ccoshf(__z); }
+        -:  757:
+        -:  758:  inline __complex__ double
+        -:  759:  __complex_cosh(__complex__ double __z) { return __builtin_ccosh(__z); }
+        -:  760:
+        -:  761:  inline __complex__ long double
+        -:  762:  __complex_cosh(const __complex__ long double& __z)
+        -:  763:  { return __builtin_ccoshl(__z); }
+        -:  764:
+        -:  765:  template<typename _Tp>
+        -:  766:    inline complex<_Tp>
+        -:  767:    cosh(const complex<_Tp>& __z) { return __complex_cosh(__z.__rep()); }
+        -:  768:#else
+        -:  769:  template<typename _Tp>
+        -:  770:    inline complex<_Tp>
+        -:  771:    cosh(const complex<_Tp>& __z) { return __complex_cosh(__z); }
+        -:  772:#endif
+        -:  773:
+        -:  774:  // 26.2.8/3 exp(__z): Returns the complex base e exponential of x
+        -:  775:  template<typename _Tp>
+        -:  776:    inline complex<_Tp>
+        -:  777:    __complex_exp(const complex<_Tp>& __z)
+        -:  778:    { return std::polar<_Tp>(exp(__z.real()), __z.imag()); }
+        -:  779:
+        -:  780:#if _GLIBCXX_USE_C99_COMPLEX
+        -:  781:  inline __complex__ float
+        -:  782:  __complex_exp(__complex__ float __z) { return __builtin_cexpf(__z); }
+        -:  783:
+        -:  784:  inline __complex__ double
+function _ZSt13__complex_expCd called 3 returned 100% blocks executed 100%
+        3:  785:  __complex_exp(__complex__ double __z) { return __builtin_cexp(__z); }
+        3:  785-block  0
+        -:  786:
+        -:  787:  inline __complex__ long double
+        -:  788:  __complex_exp(const __complex__ long double& __z)
+        -:  789:  { return __builtin_cexpl(__z); }
+        -:  790:
+        -:  791:  template<typename _Tp>
+        -:  792:    inline complex<_Tp>
+function _ZSt3expIdESt7complexIT_ERKS2_ called 3 returned 100% blocks executed 100%
+        3:  793:    exp(const complex<_Tp>& __z) { return __complex_exp(__z.__rep()); }
+        3:  793-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+        -:  794:#else
+        -:  795:  template<typename _Tp>
+        -:  796:    inline complex<_Tp>
+        -:  797:    exp(const complex<_Tp>& __z) { return __complex_exp(__z); }
+        -:  798:#endif
+        -:  799:
+        -:  800:  // 26.2.8/5 log(__z): Returns the natural complex logarithm of __z.
+        -:  801:  //                    The branch cut is along the negative axis.
+        -:  802:  template<typename _Tp>
+        -:  803:    inline complex<_Tp>
+        -:  804:    __complex_log(const complex<_Tp>& __z)
+        -:  805:    { return complex<_Tp>(log(std::abs(__z)), std::arg(__z)); }
+        -:  806:
+        -:  807:#if _GLIBCXX_USE_C99_COMPLEX
+        -:  808:  inline __complex__ float
+        -:  809:  __complex_log(__complex__ float __z) { return __builtin_clogf(__z); }
+        -:  810:
+        -:  811:  inline __complex__ double
+        -:  812:  __complex_log(__complex__ double __z) { return __builtin_clog(__z); }
+        -:  813:
+        -:  814:  inline __complex__ long double
+        -:  815:  __complex_log(const __complex__ long double& __z)
+        -:  816:  { return __builtin_clogl(__z); }
+        -:  817:
+        -:  818:  template<typename _Tp>
+        -:  819:    inline complex<_Tp>
+        -:  820:    log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
+        -:  821:#else
+        -:  822:  template<typename _Tp>
+        -:  823:    inline complex<_Tp>
+        -:  824:    log(const complex<_Tp>& __z) { return __complex_log(__z); }
+        -:  825:#endif
+        -:  826:
+        -:  827:  template<typename _Tp>
+        -:  828:    inline complex<_Tp>
+        -:  829:    log10(const complex<_Tp>& __z)
+        -:  830:    { return std::log(__z) / log(_Tp(10.0)); }
+        -:  831:
+        -:  832:  // 26.2.8/10 sin(__z): Returns the sine of __z.
+        -:  833:  template<typename _Tp>
+        -:  834:    inline complex<_Tp>
+        -:  835:    __complex_sin(const complex<_Tp>& __z)
+        -:  836:    {
+        -:  837:      const _Tp __x = __z.real();
+        -:  838:      const _Tp __y = __z.imag();
+        -:  839:      return complex<_Tp>(sin(__x) * cosh(__y), cos(__x) * sinh(__y));
+        -:  840:    }
+        -:  841:
+        -:  842:#if _GLIBCXX_USE_C99_COMPLEX
+        -:  843:  inline __complex__ float
+        -:  844:  __complex_sin(__complex__ float __z) { return __builtin_csinf(__z); }
+        -:  845:
+        -:  846:  inline __complex__ double
+        -:  847:  __complex_sin(__complex__ double __z) { return __builtin_csin(__z); }
+        -:  848:
+        -:  849:  inline __complex__ long double
+        -:  850:  __complex_sin(const __complex__ long double& __z)
+        -:  851:  { return __builtin_csinl(__z); }
+        -:  852:
+        -:  853:  template<typename _Tp>
+        -:  854:    inline complex<_Tp>
+        -:  855:    sin(const complex<_Tp>& __z) { return __complex_sin(__z.__rep()); }
+        -:  856:#else
+        -:  857:  template<typename _Tp>
+        -:  858:    inline complex<_Tp>
+        -:  859:    sin(const complex<_Tp>& __z) { return __complex_sin(__z); }
+        -:  860:#endif
+        -:  861:
+        -:  862:  // 26.2.8/11 sinh(__z): Returns the hyperbolic sine of __z.
+        -:  863:  template<typename _Tp>
+        -:  864:    inline complex<_Tp>
+        -:  865:    __complex_sinh(const complex<_Tp>& __z)
+        -:  866:    {
+        -:  867:      const _Tp __x = __z.real();
+        -:  868:      const _Tp  __y = __z.imag();
+        -:  869:      return complex<_Tp>(sinh(__x) * cos(__y), cosh(__x) * sin(__y));
+        -:  870:    }
+        -:  871:
+        -:  872:#if _GLIBCXX_USE_C99_COMPLEX
+        -:  873:  inline __complex__ float
+        -:  874:  __complex_sinh(__complex__ float __z) { return __builtin_csinhf(__z); }
+        -:  875:
+        -:  876:  inline __complex__ double
+        -:  877:  __complex_sinh(__complex__ double __z) { return __builtin_csinh(__z); }
+        -:  878:
+        -:  879:  inline __complex__ long double
+        -:  880:  __complex_sinh(const __complex__ long double& __z)
+        -:  881:  { return __builtin_csinhl(__z); }
+        -:  882:
+        -:  883:  template<typename _Tp>
+        -:  884:    inline complex<_Tp>
+        -:  885:    sinh(const complex<_Tp>& __z) { return __complex_sinh(__z.__rep()); }
+        -:  886:#else
+        -:  887:  template<typename _Tp>
+        -:  888:    inline complex<_Tp>
+        -:  889:    sinh(const complex<_Tp>& __z) { return __complex_sinh(__z); }
+        -:  890:#endif
+        -:  891:
+        -:  892:  // 26.2.8/13 sqrt(__z): Returns the complex square root of __z.
+        -:  893:  //                     The branch cut is on the negative axis.
+        -:  894:  template<typename _Tp>
+        -:  895:    complex<_Tp>
+        -:  896:    __complex_sqrt(const complex<_Tp>& __z)
+        -:  897:    {
+        -:  898:      _Tp __x = __z.real();
+        -:  899:      _Tp __y = __z.imag();
+        -:  900:
+        -:  901:      if (__x == _Tp())
+        -:  902:        {
+        -:  903:          _Tp __t = sqrt(abs(__y) / 2);
+        -:  904:          return complex<_Tp>(__t, __y < _Tp() ? -__t : __t);
+        -:  905:        }
+        -:  906:      else
+        -:  907:        {
+        -:  908:          _Tp __t = sqrt(2 * (std::abs(__z) + abs(__x)));
+        -:  909:          _Tp __u = __t / 2;
+        -:  910:          return __x > _Tp()
+        -:  911:            ? complex<_Tp>(__u, __y / __t)
+        -:  912:            : complex<_Tp>(abs(__y) / __t, __y < _Tp() ? -__u : __u);
+        -:  913:        }
+        -:  914:    }
+        -:  915:
+        -:  916:#if _GLIBCXX_USE_C99_COMPLEX
+        -:  917:  inline __complex__ float
+        -:  918:  __complex_sqrt(__complex__ float __z) { return __builtin_csqrtf(__z); }
+        -:  919:
+        -:  920:  inline __complex__ double
+        -:  921:  __complex_sqrt(__complex__ double __z) { return __builtin_csqrt(__z); }
+        -:  922:
+        -:  923:  inline __complex__ long double
+        -:  924:  __complex_sqrt(const __complex__ long double& __z)
+        -:  925:  { return __builtin_csqrtl(__z); }
+        -:  926:
+        -:  927:  template<typename _Tp>
+        -:  928:    inline complex<_Tp>
+        -:  929:    sqrt(const complex<_Tp>& __z) { return __complex_sqrt(__z.__rep()); }
+        -:  930:#else
+        -:  931:  template<typename _Tp>
+        -:  932:    inline complex<_Tp>
+        -:  933:    sqrt(const complex<_Tp>& __z) { return __complex_sqrt(__z); }
+        -:  934:#endif
+        -:  935:
+        -:  936:  // 26.2.8/14 tan(__z):  Return the complex tangent of __z.
+        -:  937:
+        -:  938:  template<typename _Tp>
+        -:  939:    inline complex<_Tp>
+        -:  940:    __complex_tan(const complex<_Tp>& __z)
+        -:  941:    { return std::sin(__z) / std::cos(__z); }
+        -:  942:
+        -:  943:#if _GLIBCXX_USE_C99_COMPLEX
+        -:  944:  inline __complex__ float
+        -:  945:  __complex_tan(__complex__ float __z) { return __builtin_ctanf(__z); }
+        -:  946:
+        -:  947:  inline __complex__ double
+        -:  948:  __complex_tan(__complex__ double __z) { return __builtin_ctan(__z); }
+        -:  949:
+        -:  950:  inline __complex__ long double
+        -:  951:  __complex_tan(const __complex__ long double& __z)
+        -:  952:  { return __builtin_ctanl(__z); }
+        -:  953:
+        -:  954:  template<typename _Tp>
+        -:  955:    inline complex<_Tp>
+        -:  956:    tan(const complex<_Tp>& __z) { return __complex_tan(__z.__rep()); }
+        -:  957:#else
+        -:  958:  template<typename _Tp>
+        -:  959:    inline complex<_Tp>
+        -:  960:    tan(const complex<_Tp>& __z) { return __complex_tan(__z); }
+        -:  961:#endif
+        -:  962:
+        -:  963:
+        -:  964:  // 26.2.8/15 tanh(__z):  Returns the hyperbolic tangent of __z.
+        -:  965:
+        -:  966:  template<typename _Tp>
+        -:  967:    inline complex<_Tp>
+        -:  968:    __complex_tanh(const complex<_Tp>& __z)
+        -:  969:    { return std::sinh(__z) / std::cosh(__z); }
+        -:  970:
+        -:  971:#if _GLIBCXX_USE_C99_COMPLEX
+        -:  972:  inline __complex__ float
+        -:  973:  __complex_tanh(__complex__ float __z) { return __builtin_ctanhf(__z); }
+        -:  974:
+        -:  975:  inline __complex__ double
+        -:  976:  __complex_tanh(__complex__ double __z) { return __builtin_ctanh(__z); }
+        -:  977:
+        -:  978:  inline __complex__ long double
+        -:  979:  __complex_tanh(const __complex__ long double& __z)
+        -:  980:  { return __builtin_ctanhl(__z); }
+        -:  981:
+        -:  982:  template<typename _Tp>
+        -:  983:    inline complex<_Tp>
+        -:  984:    tanh(const complex<_Tp>& __z) { return __complex_tanh(__z.__rep()); }
+        -:  985:#else
+        -:  986:  template<typename _Tp>
+        -:  987:    inline complex<_Tp>
+        -:  988:    tanh(const complex<_Tp>& __z) { return __complex_tanh(__z); }
+        -:  989:#endif
+        -:  990:
+        -:  991:
+        -:  992:  // 26.2.8/9  pow(__x, __y): Returns the complex power base of __x
+        -:  993:  //                          raised to the __y-th power.  The branch
+        -:  994:  //                          cut is on the negative axis.
+        -:  995:  template<typename _Tp>
+        -:  996:    complex<_Tp>
+function _ZSt22__complex_pow_unsignedIdESt7complexIT_ES2_j called 8 returned 100% blocks executed 100%
+        8:  997:    __complex_pow_unsigned(complex<_Tp> __x, unsigned __n)
+        -:  998:    {
+        8:  999:      complex<_Tp> __y = __n % 2 ? __x : complex<_Tp>(1);
+        8:  999-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 6
+        2:  999-block  1
+        6:  999-block  2
+call    2 returned 6
+        -: 1000:
+       12: 1001:      while (__n >>= 1)
+        8: 1001-block  0
+       12: 1001-block  1
+branch  0 taken 4
+branch  1 taken 8 (fallthrough)
+        -: 1002:        {
+        4: 1003:          __x *= __x;
+        4: 1003-block  0
+call    0 returned 4
+        4: 1004:          if (__n % 2)
+branch  0 taken 4 (fallthrough)
+branch  1 taken 0
+        4: 1005:            __y *= __x;
+        4: 1005-block  0
+call    0 returned 4
+        -: 1006:        }
+        -: 1007:
+        8: 1008:      return __y;
+        8: 1008-block  0
+        -: 1009:    }
+        -: 1010:
+        -: 1011:  // In C++11 mode we used to implement the resolution of
+        -: 1012:  // DR 844. complex pow return type is ambiguous.
+        -: 1013:  // thus the following overload was disabled in that mode.  However, doing
+        -: 1014:  // that causes all sorts of issues, see, for example:
+        -: 1015:  //   http://gcc.gnu.org/ml/libstdc++/2013-01/msg00058.html
+        -: 1016:  // and also PR57974.
+        -: 1017:  template<typename _Tp>
+        -: 1018:    inline complex<_Tp>
+function _ZSt3powIdESt7complexIT_ERKS2_i called 8 returned 100% blocks executed 60%
+        8: 1019:    pow(const complex<_Tp>& __z, int __n)
+        -: 1020:    {
+        -: 1021:      return __n < 0
+       8*: 1022:	? complex<_Tp>(1) / std::__complex_pow_unsigned(__z, -(unsigned)__n)
+    %%%%%: 1022-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+        8: 1022-block  1
+    $$$$$: 1022-block  2
+       16: 1023:        : std::__complex_pow_unsigned(__z, __n);
+        8: 1023-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 8
+        8: 1023-block  1
+call    2 returned 8
+        8: 1023-block  2
+        -: 1024:    }
+        -: 1025:
+        -: 1026:  template<typename _Tp>
+        -: 1027:    complex<_Tp>
+        -: 1028:    pow(const complex<_Tp>& __x, const _Tp& __y)
+        -: 1029:    {
+        -: 1030:#if ! _GLIBCXX_USE_C99_COMPLEX
+        -: 1031:      if (__x == _Tp())
+        -: 1032:	return _Tp();
+        -: 1033:#endif
+        -: 1034:      if (__x.imag() == _Tp() && __x.real() > _Tp())
+        -: 1035:        return pow(__x.real(), __y);
+        -: 1036:
+        -: 1037:      complex<_Tp> __t = std::log(__x);
+        -: 1038:      return std::polar<_Tp>(exp(__y * __t.real()), __y * __t.imag());
+        -: 1039:    }
+        -: 1040:
+        -: 1041:  template<typename _Tp>
+        -: 1042:    inline complex<_Tp>
+        -: 1043:    __complex_pow(const complex<_Tp>& __x, const complex<_Tp>& __y)
+        -: 1044:    { return __x == _Tp() ? _Tp() : std::exp(__y * std::log(__x)); }
+        -: 1045:
+        -: 1046:#if _GLIBCXX_USE_C99_COMPLEX
+        -: 1047:  inline __complex__ float
+        -: 1048:  __complex_pow(__complex__ float __x, __complex__ float __y)
+        -: 1049:  { return __builtin_cpowf(__x, __y); }
+        -: 1050:
+        -: 1051:  inline __complex__ double
+        -: 1052:  __complex_pow(__complex__ double __x, __complex__ double __y)
+        -: 1053:  { return __builtin_cpow(__x, __y); }
+        -: 1054:
+        -: 1055:  inline __complex__ long double
+        -: 1056:  __complex_pow(const __complex__ long double& __x,
+        -: 1057:		const __complex__ long double& __y)
+        -: 1058:  { return __builtin_cpowl(__x, __y); }
+        -: 1059:
+        -: 1060:  template<typename _Tp>
+        -: 1061:    inline complex<_Tp>
+        -: 1062:    pow(const complex<_Tp>& __x, const complex<_Tp>& __y)
+        -: 1063:    { return __complex_pow(__x.__rep(), __y.__rep()); }
+        -: 1064:#else
+        -: 1065:  template<typename _Tp>
+        -: 1066:    inline complex<_Tp>
+        -: 1067:    pow(const complex<_Tp>& __x, const complex<_Tp>& __y)
+        -: 1068:    { return __complex_pow(__x, __y); }
+        -: 1069:#endif
+        -: 1070:
+        -: 1071:  template<typename _Tp>
+        -: 1072:    inline complex<_Tp>
+        -: 1073:    pow(const _Tp& __x, const complex<_Tp>& __y)
+        -: 1074:    {
+        -: 1075:      return __x > _Tp() ? std::polar<_Tp>(pow(__x, __y.real()),
+        -: 1076:					   __y.imag() * log(__x))
+        -: 1077:	                 : std::pow(complex<_Tp>(__x), __y);
+        -: 1078:    }
+        -: 1079:
+        -: 1080:  /// 26.2.3  complex specializations
+        -: 1081:  /// complex<float> specialization
+        -: 1082:  template<>
+        -: 1083:    class complex<float>
+        -: 1084:    {
+        -: 1085:    public:
+        -: 1086:      typedef float value_type;
+        -: 1087:      typedef __complex__ float _ComplexT;
+        -: 1088:
+        -: 1089:      _GLIBCXX_CONSTEXPR complex(_ComplexT __z) : _M_value(__z) { }
+        -: 1090:
+        -: 1091:      _GLIBCXX_CONSTEXPR complex(float __r = 0.0f, float __i = 0.0f)
+        -: 1092:#if __cplusplus >= 201103L
+        -: 1093:      : _M_value{ __r, __i } { }
+        -: 1094:#else
+        -: 1095:      {
+        -: 1096:	__real__ _M_value = __r;
+        -: 1097:	__imag__ _M_value = __i;
+        -: 1098:      }
+        -: 1099:#endif
+        -: 1100:
+        -: 1101:      explicit _GLIBCXX_CONSTEXPR complex(const complex<double>&);
+        -: 1102:      explicit _GLIBCXX_CONSTEXPR complex(const complex<long double>&);
+        -: 1103:
+        -: 1104:#if __cplusplus >= 201103L
+        -: 1105:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+        -: 1106:      // DR 387. std::complex over-encapsulated.
+        -: 1107:      __attribute ((__abi_tag__ ("cxx11")))
+        -: 1108:      constexpr float
+        -: 1109:      real() const { return __real__ _M_value; }
+        -: 1110:
+        -: 1111:      __attribute ((__abi_tag__ ("cxx11")))
+        -: 1112:      constexpr float
+        -: 1113:      imag() const { return __imag__ _M_value; }
+        -: 1114:#else
+        -: 1115:      float&
+        -: 1116:      real() { return __real__ _M_value; }
+        -: 1117:
+        -: 1118:      const float&
+        -: 1119:      real() const { return __real__ _M_value; }
+        -: 1120:
+        -: 1121:      float&
+        -: 1122:      imag() { return __imag__ _M_value; }
+        -: 1123:
+        -: 1124:      const float&
+        -: 1125:      imag() const { return __imag__ _M_value; }
+        -: 1126:#endif
+        -: 1127:
+        -: 1128:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+        -: 1129:      // DR 387. std::complex over-encapsulated.
+        -: 1130:      _GLIBCXX20_CONSTEXPR void
+        -: 1131:      real(float __val) { __real__ _M_value = __val; }
+        -: 1132:
+        -: 1133:      _GLIBCXX20_CONSTEXPR void
+        -: 1134:      imag(float __val) { __imag__ _M_value = __val; }
+        -: 1135:
+        -: 1136:      _GLIBCXX20_CONSTEXPR complex&
+        -: 1137:      operator=(float __f)
+        -: 1138:      {
+        -: 1139:	_M_value = __f;
+        -: 1140:	return *this;
+        -: 1141:      }
+        -: 1142:
+        -: 1143:      _GLIBCXX20_CONSTEXPR complex&
+        -: 1144:      operator+=(float __f)
+        -: 1145:      {
+        -: 1146:	_M_value += __f;
+        -: 1147:	return *this;
+        -: 1148:      }
+        -: 1149:
+        -: 1150:      _GLIBCXX20_CONSTEXPR complex&
+        -: 1151:      operator-=(float __f)
+        -: 1152:      {
+        -: 1153:	_M_value -= __f;
+        -: 1154:	return *this;
+        -: 1155:      }
+        -: 1156:
+        -: 1157:      _GLIBCXX20_CONSTEXPR complex&
+        -: 1158:      operator*=(float __f)
+        -: 1159:      {
+        -: 1160:	_M_value *= __f;
+        -: 1161:	return *this;
+        -: 1162:      }
+        -: 1163:
+        -: 1164:      _GLIBCXX20_CONSTEXPR complex&
+        -: 1165:      operator/=(float __f)
+        -: 1166:      {
+        -: 1167:	_M_value /= __f;
+        -: 1168:	return *this;
+        -: 1169:      }
+        -: 1170:
+        -: 1171:      // Let the compiler synthesize the copy and assignment
+        -: 1172:      // operator.  It always does a pretty good job.
+        -: 1173:#if __cplusplus >= 201103L
+        -: 1174:      _GLIBCXX14_CONSTEXPR complex& operator=(const complex&) = default;
+        -: 1175:#endif
+        -: 1176:
+        -: 1177:      template<typename _Tp>
+        -: 1178:        _GLIBCXX20_CONSTEXPR complex&
+        -: 1179:        operator=(const complex<_Tp>&  __z)
+        -: 1180:	{
+        -: 1181:	  __real__ _M_value = __z.real();
+        -: 1182:	  __imag__ _M_value = __z.imag();
+        -: 1183:	  return *this;
+        -: 1184:	}
+        -: 1185:
+        -: 1186:      template<typename _Tp>
+        -: 1187:        _GLIBCXX20_CONSTEXPR complex&
+        -: 1188:        operator+=(const complex<_Tp>& __z)
+        -: 1189:	{
+        -: 1190:	  _M_value += __z.__rep();
+        -: 1191:	  return *this;
+        -: 1192:	}
+        -: 1193:
+        -: 1194:      template<class _Tp>
+        -: 1195:        _GLIBCXX20_CONSTEXPR complex&
+        -: 1196:        operator-=(const complex<_Tp>& __z)
+        -: 1197:	{
+        -: 1198:	  _M_value -= __z.__rep();
+        -: 1199:	  return *this;
+        -: 1200:	}
+        -: 1201:
+        -: 1202:      template<class _Tp>
+        -: 1203:        _GLIBCXX20_CONSTEXPR complex&
+        -: 1204:        operator*=(const complex<_Tp>& __z)
+        -: 1205:	{
+        -: 1206:	  const _ComplexT __t = __z.__rep();
+        -: 1207:	  _M_value *= __t;
+        -: 1208:	  return *this;
+        -: 1209:	}
+        -: 1210:
+        -: 1211:      template<class _Tp>
+        -: 1212:        _GLIBCXX20_CONSTEXPR complex&
+        -: 1213:        operator/=(const complex<_Tp>& __z)
+        -: 1214:	{
+        -: 1215:	  const _ComplexT __t = __z.__rep();
+        -: 1216:	  _M_value /= __t;
+        -: 1217:	  return *this;
+        -: 1218:	}
+        -: 1219:
+        -: 1220:      _GLIBCXX_CONSTEXPR _ComplexT __rep() const { return _M_value; }
+        -: 1221:
+        -: 1222:    private:
+        -: 1223:      _ComplexT _M_value;
+        -: 1224:    };
+        -: 1225:
+        -: 1226:  /// 26.2.3  complex specializations
+        -: 1227:  /// complex<double> specialization
+        -: 1228:  template<>
+        -: 1229:    class complex<double>
+        -: 1230:    {
+        -: 1231:    public:
+        -: 1232:      typedef double value_type;
+        -: 1233:      typedef __complex__ double _ComplexT;
+        -: 1234:
+function _ZNSt7complexIdEC1ECd called 3 returned 100% blocks executed 100%
+        3: 1235:      _GLIBCXX_CONSTEXPR complex(_ComplexT __z) : _M_value(__z) { }
+        -: 1236:
+function _ZNSt7complexIdEC1Edd called 17 returned 100% blocks executed 100%
+       17: 1237:      _GLIBCXX_CONSTEXPR complex(double __r = 0.0, double __i = 0.0)
+        -: 1238:#if __cplusplus >= 201103L
+       17: 1239:      : _M_value{ __r, __i } { }
+        -: 1240:#else
+        -: 1241:      {
+        -: 1242:	__real__ _M_value = __r;
+        -: 1243:	__imag__ _M_value = __i;
+        -: 1244:      }
+        -: 1245:#endif
+        -: 1246:
+        -: 1247:      _GLIBCXX_CONSTEXPR complex(const complex<float>& __z)
+        -: 1248:      : _M_value(__z.__rep()) { }
+        -: 1249:
+        -: 1250:      explicit _GLIBCXX_CONSTEXPR complex(const complex<long double>&);
+        -: 1251:
+        -: 1252:#if __cplusplus >= 201103L
+        -: 1253:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+        -: 1254:      // DR 387. std::complex over-encapsulated.
+        -: 1255:      __attribute ((__abi_tag__ ("cxx11")))
+        -: 1256:      constexpr double
+function _ZNKSt7complexIdE4realB5cxx11Ev called 3 returned 100% blocks executed 100%
+        3: 1257:      real() const { return __real__ _M_value; }
+        3: 1257-block  0
+        -: 1258:
+        -: 1259:      __attribute ((__abi_tag__ ("cxx11")))
+        -: 1260:      constexpr double
+function _ZNKSt7complexIdE4imagB5cxx11Ev called 3 returned 100% blocks executed 100%
+        3: 1261:      imag() const { return __imag__ _M_value; }
+        3: 1261-block  0
+        -: 1262:#else
+        -: 1263:      double&
+        -: 1264:      real() { return __real__ _M_value; }
+        -: 1265:
+        -: 1266:      const double&
+        -: 1267:      real() const { return __real__ _M_value; }
+        -: 1268:
+        -: 1269:      double&
+        -: 1270:      imag() { return __imag__ _M_value; }
+        -: 1271:
+        -: 1272:      const double&
+        -: 1273:      imag() const { return __imag__ _M_value; }
+        -: 1274:#endif
+        -: 1275:
+        -: 1276:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+        -: 1277:      // DR 387. std::complex over-encapsulated.
+        -: 1278:      _GLIBCXX20_CONSTEXPR void
+        -: 1279:      real(double __val) { __real__ _M_value = __val; }
+        -: 1280:
+        -: 1281:      _GLIBCXX20_CONSTEXPR void
+        -: 1282:      imag(double __val) { __imag__ _M_value = __val; }
+        -: 1283:
+        -: 1284:      _GLIBCXX20_CONSTEXPR complex&
+        -: 1285:      operator=(double __d)
+        -: 1286:      {
+        -: 1287:	_M_value = __d;
+        -: 1288:	return *this;
+        -: 1289:      }
+        -: 1290:
+        -: 1291:      _GLIBCXX20_CONSTEXPR complex&
+        -: 1292:      operator+=(double __d)
+        -: 1293:      {
+        -: 1294:	_M_value += __d;
+        -: 1295:	return *this;
+        -: 1296:      }
+        -: 1297:
+        -: 1298:      _GLIBCXX20_CONSTEXPR complex&
+        -: 1299:      operator-=(double __d)
+        -: 1300:      {
+        -: 1301:	_M_value -= __d;
+        -: 1302:	return *this;
+        -: 1303:      }
+        -: 1304:
+        -: 1305:      _GLIBCXX20_CONSTEXPR complex&
+function _ZNSt7complexIdEmLEd called 15 returned 100% blocks executed 100%
+       15: 1306:      operator*=(double __d)
+        -: 1307:      {
+       15: 1308:	_M_value *= __d;
+       15: 1309:	return *this;
+       15: 1309-block  0
+        -: 1310:      }
+        -: 1311:
+        -: 1312:      _GLIBCXX20_CONSTEXPR complex&
+        -: 1313:      operator/=(double __d)
+        -: 1314:      {
+        -: 1315:	_M_value /= __d;
+        -: 1316:	return *this;
+        -: 1317:      }
+        -: 1318:
+        -: 1319:      // The compiler will synthesize this, efficiently.
+        -: 1320:#if __cplusplus >= 201103L
+        -: 1321:      _GLIBCXX14_CONSTEXPR complex& operator=(const complex&) = default;
+        -: 1322:#endif
+        -: 1323:
+        -: 1324:      template<typename _Tp>
+        -: 1325:        _GLIBCXX20_CONSTEXPR complex&
+        -: 1326:        operator=(const complex<_Tp>& __z)
+        -: 1327:	{
+        -: 1328:	  _M_value = __z.__rep();
+        -: 1329:	  return *this;
+        -: 1330:	}
+        -: 1331:
+        -: 1332:      template<typename _Tp>
+        -: 1333:        _GLIBCXX20_CONSTEXPR complex&
+function _ZNSt7complexIdEpLIdEERS0_RKS_IT_E called 24 returned 100% blocks executed 100%
+       24: 1334:        operator+=(const complex<_Tp>& __z)
+        -: 1335:	{
+       24: 1336:	  _M_value += __z.__rep();
+       24: 1336-block  0
+call    0 returned 24
+       24: 1337:	  return *this;
+        -: 1338:	}
+        -: 1339:
+        -: 1340:      template<typename _Tp>
+        -: 1341:        _GLIBCXX20_CONSTEXPR complex&
+        -: 1342:        operator-=(const complex<_Tp>& __z)
+        -: 1343:	{
+        -: 1344:	  _M_value -= __z.__rep();
+        -: 1345:	  return *this;
+        -: 1346:	}
+        -: 1347:
+        -: 1348:      template<typename _Tp>
+        -: 1349:        _GLIBCXX20_CONSTEXPR complex&
+function _ZNSt7complexIdEmLIdEERS0_RKS_IT_E called 16 returned 100% blocks executed 100%
+       16: 1350:        operator*=(const complex<_Tp>& __z)
+        -: 1351:	{
+       16: 1352:	  const _ComplexT __t = __z.__rep();
+       16: 1352-block  0
+call    0 returned 16
+       16: 1353:	  _M_value *= __t;
+       16: 1354:	  return *this;
+        -: 1355:	}
+        -: 1356:
+        -: 1357:      template<typename _Tp>
+        -: 1358:        _GLIBCXX20_CONSTEXPR complex&
+function _ZNSt7complexIdEdVIdEERS0_RKS_IT_E called 0 returned 0% blocks executed 0%
+    #####: 1359:        operator/=(const complex<_Tp>& __z)
+        -: 1360:	{
+    #####: 1361:	  const _ComplexT __t = __z.__rep();
+    %%%%%: 1361-block  0
+call    0 never executed
+    #####: 1362:	  _M_value /= __t;
+    #####: 1363:	  return *this;
+        -: 1364:	}
+        -: 1365:
+function _ZNKSt7complexIdE5__repEv called 43 returned 100% blocks executed 100%
+       43: 1366:      _GLIBCXX_CONSTEXPR _ComplexT __rep() const { return _M_value; }
+       43: 1366-block  0
+        -: 1367:
+        -: 1368:    private:
+        -: 1369:      _ComplexT _M_value;
+        -: 1370:    };
+        -: 1371:
+        -: 1372:  /// 26.2.3  complex specializations
+        -: 1373:  /// complex<long double> specialization
+        -: 1374:  template<>
+        -: 1375:    class complex<long double>
+        -: 1376:    {
+        -: 1377:    public:
+        -: 1378:      typedef long double value_type;
+        -: 1379:      typedef __complex__ long double _ComplexT;
+        -: 1380:
+        -: 1381:      _GLIBCXX_CONSTEXPR complex(_ComplexT __z) : _M_value(__z) { }
+        -: 1382:
+        -: 1383:      _GLIBCXX_CONSTEXPR complex(long double __r = 0.0L,
+        -: 1384:				 long double __i = 0.0L)
+        -: 1385:#if __cplusplus >= 201103L
+        -: 1386:      : _M_value{ __r, __i } { }
+        -: 1387:#else
+        -: 1388:      {
+        -: 1389:	__real__ _M_value = __r;
+        -: 1390:	__imag__ _M_value = __i;
+        -: 1391:      }
+        -: 1392:#endif
+        -: 1393:
+        -: 1394:      _GLIBCXX_CONSTEXPR complex(const complex<float>& __z)
+        -: 1395:      : _M_value(__z.__rep()) { }
+        -: 1396:
+        -: 1397:      _GLIBCXX_CONSTEXPR complex(const complex<double>& __z)
+        -: 1398:      : _M_value(__z.__rep()) { }
+        -: 1399:
+        -: 1400:#if __cplusplus >= 201103L
+        -: 1401:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+        -: 1402:      // DR 387. std::complex over-encapsulated.
+        -: 1403:      __attribute ((__abi_tag__ ("cxx11")))
+        -: 1404:      constexpr long double
+        -: 1405:      real() const { return __real__ _M_value; }
+        -: 1406:
+        -: 1407:      __attribute ((__abi_tag__ ("cxx11")))
+        -: 1408:      constexpr long double
+        -: 1409:      imag() const { return __imag__ _M_value; }
+        -: 1410:#else
+        -: 1411:      long double&
+        -: 1412:      real() { return __real__ _M_value; }
+        -: 1413:
+        -: 1414:      const long double&
+        -: 1415:      real() const { return __real__ _M_value; }
+        -: 1416:
+        -: 1417:      long double&
+        -: 1418:      imag() { return __imag__ _M_value; }
+        -: 1419:
+        -: 1420:      const long double&
+        -: 1421:      imag() const { return __imag__ _M_value; }
+        -: 1422:#endif
+        -: 1423:
+        -: 1424:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+        -: 1425:      // DR 387. std::complex over-encapsulated.
+        -: 1426:      _GLIBCXX20_CONSTEXPR void
+        -: 1427:      real(long double __val) { __real__ _M_value = __val; }
+        -: 1428:
+        -: 1429:      _GLIBCXX20_CONSTEXPR void
+        -: 1430:      imag(long double __val) { __imag__ _M_value = __val; }
+        -: 1431:
+        -: 1432:      _GLIBCXX20_CONSTEXPR complex&
+        -: 1433:      operator=(long double __r)
+        -: 1434:      {
+        -: 1435:	_M_value = __r;
+        -: 1436:	return *this;
+        -: 1437:      }
+        -: 1438:
+        -: 1439:      _GLIBCXX20_CONSTEXPR complex&
+        -: 1440:      operator+=(long double __r)
+        -: 1441:      {
+        -: 1442:	_M_value += __r;
+        -: 1443:	return *this;
+        -: 1444:      }
+        -: 1445:
+        -: 1446:      _GLIBCXX20_CONSTEXPR complex&
+        -: 1447:      operator-=(long double __r)
+        -: 1448:      {
+        -: 1449:	_M_value -= __r;
+        -: 1450:	return *this;
+        -: 1451:      }
+        -: 1452:
+        -: 1453:      _GLIBCXX20_CONSTEXPR complex&
+        -: 1454:      operator*=(long double __r)
+        -: 1455:      {
+        -: 1456:	_M_value *= __r;
+        -: 1457:	return *this;
+        -: 1458:      }
+        -: 1459:
+        -: 1460:      _GLIBCXX20_CONSTEXPR complex&
+        -: 1461:      operator/=(long double __r)
+        -: 1462:      {
+        -: 1463:	_M_value /= __r;
+        -: 1464:	return *this;
+        -: 1465:      }
+        -: 1466:
+        -: 1467:      // The compiler knows how to do this efficiently
+        -: 1468:#if __cplusplus >= 201103L
+        -: 1469:      _GLIBCXX14_CONSTEXPR complex& operator=(const complex&) = default;
+        -: 1470:#endif
+        -: 1471:
+        -: 1472:      template<typename _Tp>
+        -: 1473:        _GLIBCXX20_CONSTEXPR complex&
+        -: 1474:        operator=(const complex<_Tp>& __z)
+        -: 1475:	{
+        -: 1476:	  _M_value = __z.__rep();
+        -: 1477:	  return *this;
+        -: 1478:	}
+        -: 1479:
+        -: 1480:      template<typename _Tp>
+        -: 1481:        _GLIBCXX20_CONSTEXPR complex&
+        -: 1482:	operator+=(const complex<_Tp>& __z)
+        -: 1483:	{
+        -: 1484:	  _M_value += __z.__rep();
+        -: 1485:	  return *this;
+        -: 1486:	}
+        -: 1487:
+        -: 1488:      template<typename _Tp>
+        -: 1489:        _GLIBCXX20_CONSTEXPR complex&
+        -: 1490:	operator-=(const complex<_Tp>& __z)
+        -: 1491:	{
+        -: 1492:	  _M_value -= __z.__rep();
+        -: 1493:	  return *this;
+        -: 1494:	}
+        -: 1495:
+        -: 1496:      template<typename _Tp>
+        -: 1497:        _GLIBCXX20_CONSTEXPR complex&
+        -: 1498:	operator*=(const complex<_Tp>& __z)
+        -: 1499:	{
+        -: 1500:	  const _ComplexT __t = __z.__rep();
+        -: 1501:	  _M_value *= __t;
+        -: 1502:	  return *this;
+        -: 1503:	}
+        -: 1504:
+        -: 1505:      template<typename _Tp>
+        -: 1506:        _GLIBCXX20_CONSTEXPR complex&
+        -: 1507:	operator/=(const complex<_Tp>& __z)
+        -: 1508:	{
+        -: 1509:	  const _ComplexT __t = __z.__rep();
+        -: 1510:	  _M_value /= __t;
+        -: 1511:	  return *this;
+        -: 1512:	}
+        -: 1513:
+        -: 1514:      _GLIBCXX_CONSTEXPR _ComplexT __rep() const { return _M_value; }
+        -: 1515:
+        -: 1516:    private:
+        -: 1517:      _ComplexT _M_value;
+        -: 1518:    };
+        -: 1519:
+        -: 1520:  // These bits have to be at the end of this file, so that the
+        -: 1521:  // specializations have all been defined.
+        -: 1522:  inline _GLIBCXX_CONSTEXPR
+        -: 1523:  complex<float>::complex(const complex<double>& __z)
+        -: 1524:  : _M_value(__z.__rep()) { }
+        -: 1525:
+        -: 1526:  inline _GLIBCXX_CONSTEXPR
+        -: 1527:  complex<float>::complex(const complex<long double>& __z)
+        -: 1528:  : _M_value(__z.__rep()) { }
+        -: 1529:
+        -: 1530:  inline _GLIBCXX_CONSTEXPR
+        -: 1531:  complex<double>::complex(const complex<long double>& __z)
+        -: 1532:  : _M_value(__z.__rep()) { }
+        -: 1533:
+        -: 1534:  // Inhibit implicit instantiations for required instantiations,
+        -: 1535:  // which are defined via explicit instantiations elsewhere.
+        -: 1536:  // NB:  This syntax is a GNU extension.
+        -: 1537:#if _GLIBCXX_EXTERN_TEMPLATE
+        -: 1538:  extern template istream& operator>>(istream&, complex<float>&);
+        -: 1539:  extern template ostream& operator<<(ostream&, const complex<float>&);
+        -: 1540:  extern template istream& operator>>(istream&, complex<double>&);
+        -: 1541:  extern template ostream& operator<<(ostream&, const complex<double>&);
+        -: 1542:  extern template istream& operator>>(istream&, complex<long double>&);
+        -: 1543:  extern template ostream& operator<<(ostream&, const complex<long double>&);
+        -: 1544:
+        -: 1545:#ifdef _GLIBCXX_USE_WCHAR_T
+        -: 1546:  extern template wistream& operator>>(wistream&, complex<float>&);
+        -: 1547:  extern template wostream& operator<<(wostream&, const complex<float>&);
+        -: 1548:  extern template wistream& operator>>(wistream&, complex<double>&);
+        -: 1549:  extern template wostream& operator<<(wostream&, const complex<double>&);
+        -: 1550:  extern template wistream& operator>>(wistream&, complex<long double>&);
+        -: 1551:  extern template wostream& operator<<(wostream&, const complex<long double>&);
+        -: 1552:#endif
+        -: 1553:#endif
+        -: 1554:
+        -: 1555:  /// @} group complex_numbers
+        -: 1556:
+        -: 1557:_GLIBCXX_END_NAMESPACE_VERSION
+        -: 1558:} // namespace
+        -: 1559:
+        -: 1560:namespace __gnu_cxx _GLIBCXX_VISIBILITY(default)
+        -: 1561:{
+        -: 1562:_GLIBCXX_BEGIN_NAMESPACE_VERSION
+        -: 1563:
+        -: 1564:  // See ext/type_traits.h for the primary template.
+        -: 1565:  template<typename _Tp, typename _Up>
+        -: 1566:    struct __promote_2<std::complex<_Tp>, _Up>
+        -: 1567:    {
+        -: 1568:    public:
+        -: 1569:      typedef std::complex<typename __promote_2<_Tp, _Up>::__type> __type;
+        -: 1570:    };
+        -: 1571:
+        -: 1572:  template<typename _Tp, typename _Up>
+        -: 1573:    struct __promote_2<_Tp, std::complex<_Up> >
+        -: 1574:    {
+        -: 1575:    public:
+        -: 1576:      typedef std::complex<typename __promote_2<_Tp, _Up>::__type> __type;
+        -: 1577:    };
+        -: 1578:
+        -: 1579:  template<typename _Tp, typename _Up>
+        -: 1580:    struct __promote_2<std::complex<_Tp>, std::complex<_Up> >
+        -: 1581:    {
+        -: 1582:    public:
+        -: 1583:      typedef std::complex<typename __promote_2<_Tp, _Up>::__type> __type;
+        -: 1584:    };
+        -: 1585:
+        -: 1586:_GLIBCXX_END_NAMESPACE_VERSION
+        -: 1587:} // namespace
+        -: 1588:
+        -: 1589:#if __cplusplus >= 201103L
+        -: 1590:
+        -: 1591:namespace std _GLIBCXX_VISIBILITY(default)
+        -: 1592:{
+        -: 1593:_GLIBCXX_BEGIN_NAMESPACE_VERSION
+        -: 1594:
+        -: 1595:  // Forward declarations.
+        -: 1596:  template<typename _Tp> std::complex<_Tp> acos(const std::complex<_Tp>&);
+        -: 1597:  template<typename _Tp> std::complex<_Tp> asin(const std::complex<_Tp>&);
+        -: 1598:  template<typename _Tp> std::complex<_Tp> atan(const std::complex<_Tp>&);
+        -: 1599:
+        -: 1600:  template<typename _Tp> std::complex<_Tp> acosh(const std::complex<_Tp>&);
+        -: 1601:  template<typename _Tp> std::complex<_Tp> asinh(const std::complex<_Tp>&);
+        -: 1602:  template<typename _Tp> std::complex<_Tp> atanh(const std::complex<_Tp>&);
+        -: 1603:  // DR 595.
+        -: 1604:  template<typename _Tp> _Tp               fabs(const std::complex<_Tp>&);
+        -: 1605:
+        -: 1606:  template<typename _Tp>
+        -: 1607:    inline std::complex<_Tp>
+        -: 1608:    __complex_acos(const std::complex<_Tp>& __z)
+        -: 1609:    {
+        -: 1610:      const std::complex<_Tp> __t = std::asin(__z);
+        -: 1611:      const _Tp __pi_2 = 1.5707963267948966192313216916397514L;
+        -: 1612:      return std::complex<_Tp>(__pi_2 - __t.real(), -__t.imag());
+        -: 1613:    }
+        -: 1614:
+        -: 1615:#if _GLIBCXX_USE_C99_COMPLEX_TR1
+        -: 1616:  inline __complex__ float
+        -: 1617:  __complex_acos(__complex__ float __z)
+        -: 1618:  { return __builtin_cacosf(__z); }
+        -: 1619:
+        -: 1620:  inline __complex__ double
+        -: 1621:  __complex_acos(__complex__ double __z)
+        -: 1622:  { return __builtin_cacos(__z); }
+        -: 1623:
+        -: 1624:  inline __complex__ long double
+        -: 1625:  __complex_acos(const __complex__ long double& __z)
+        -: 1626:  { return __builtin_cacosl(__z); }
+        -: 1627:
+        -: 1628:  template<typename _Tp>
+        -: 1629:    inline std::complex<_Tp>
+        -: 1630:    acos(const std::complex<_Tp>& __z)
+        -: 1631:    { return __complex_acos(__z.__rep()); }
+        -: 1632:#else
+        -: 1633:  /// acos(__z) [8.1.2].
+        -: 1634:  //  Effects:  Behaves the same as C99 function cacos, defined
+        -: 1635:  //            in subclause 7.3.5.1.
+        -: 1636:  template<typename _Tp>
+        -: 1637:    inline std::complex<_Tp>
+        -: 1638:    acos(const std::complex<_Tp>& __z)
+        -: 1639:    { return __complex_acos(__z); }
+        -: 1640:#endif
+        -: 1641:
+        -: 1642:  template<typename _Tp>
+        -: 1643:    inline std::complex<_Tp>
+        -: 1644:    __complex_asin(const std::complex<_Tp>& __z)
+        -: 1645:    {
+        -: 1646:      std::complex<_Tp> __t(-__z.imag(), __z.real());
+        -: 1647:      __t = std::asinh(__t);
+        -: 1648:      return std::complex<_Tp>(__t.imag(), -__t.real());
+        -: 1649:    }
+        -: 1650:
+        -: 1651:#if _GLIBCXX_USE_C99_COMPLEX_TR1
+        -: 1652:  inline __complex__ float
+        -: 1653:  __complex_asin(__complex__ float __z)
+        -: 1654:  { return __builtin_casinf(__z); }
+        -: 1655:
+        -: 1656:  inline __complex__ double
+        -: 1657:  __complex_asin(__complex__ double __z)
+        -: 1658:  { return __builtin_casin(__z); }
+        -: 1659:
+        -: 1660:  inline __complex__ long double
+        -: 1661:  __complex_asin(const __complex__ long double& __z)
+        -: 1662:  { return __builtin_casinl(__z); }
+        -: 1663:
+        -: 1664:  template<typename _Tp>
+        -: 1665:    inline std::complex<_Tp>
+        -: 1666:    asin(const std::complex<_Tp>& __z)
+        -: 1667:    { return __complex_asin(__z.__rep()); }
+        -: 1668:#else
+        -: 1669:  /// asin(__z) [8.1.3].
+        -: 1670:  //  Effects:  Behaves the same as C99 function casin, defined
+        -: 1671:  //            in subclause 7.3.5.2.
+        -: 1672:  template<typename _Tp>
+        -: 1673:    inline std::complex<_Tp>
+        -: 1674:    asin(const std::complex<_Tp>& __z)
+        -: 1675:    { return __complex_asin(__z); }
+        -: 1676:#endif
+        -: 1677:
+        -: 1678:  template<typename _Tp>
+        -: 1679:    std::complex<_Tp>
+        -: 1680:    __complex_atan(const std::complex<_Tp>& __z)
+        -: 1681:    {
+        -: 1682:      const _Tp __r2 = __z.real() * __z.real();
+        -: 1683:      const _Tp __x = _Tp(1.0) - __r2 - __z.imag() * __z.imag();
+        -: 1684:
+        -: 1685:      _Tp __num = __z.imag() + _Tp(1.0);
+        -: 1686:      _Tp __den = __z.imag() - _Tp(1.0);
+        -: 1687:
+        -: 1688:      __num = __r2 + __num * __num;
+        -: 1689:      __den = __r2 + __den * __den;
+        -: 1690:
+        -: 1691:      return std::complex<_Tp>(_Tp(0.5) * atan2(_Tp(2.0) * __z.real(), __x),
+        -: 1692:			       _Tp(0.25) * log(__num / __den));
+        -: 1693:    }
+        -: 1694:
+        -: 1695:#if _GLIBCXX_USE_C99_COMPLEX_TR1
+        -: 1696:  inline __complex__ float
+        -: 1697:  __complex_atan(__complex__ float __z)
+        -: 1698:  { return __builtin_catanf(__z); }
+        -: 1699:
+        -: 1700:  inline __complex__ double
+        -: 1701:  __complex_atan(__complex__ double __z)
+        -: 1702:  { return __builtin_catan(__z); }
+        -: 1703:
+        -: 1704:  inline __complex__ long double
+        -: 1705:  __complex_atan(const __complex__ long double& __z)
+        -: 1706:  { return __builtin_catanl(__z); }
+        -: 1707:
+        -: 1708:  template<typename _Tp>
+        -: 1709:    inline std::complex<_Tp>
+        -: 1710:    atan(const std::complex<_Tp>& __z)
+        -: 1711:    { return __complex_atan(__z.__rep()); }
+        -: 1712:#else
+        -: 1713:  /// atan(__z) [8.1.4].
+        -: 1714:  //  Effects:  Behaves the same as C99 function catan, defined
+        -: 1715:  //            in subclause 7.3.5.3.
+        -: 1716:  template<typename _Tp>
+        -: 1717:    inline std::complex<_Tp>
+        -: 1718:    atan(const std::complex<_Tp>& __z)
+        -: 1719:    { return __complex_atan(__z); }
+        -: 1720:#endif
+        -: 1721:
+        -: 1722:  template<typename _Tp>
+        -: 1723:    std::complex<_Tp>
+        -: 1724:    __complex_acosh(const std::complex<_Tp>& __z)
+        -: 1725:    {
+        -: 1726:      // Kahan's formula.
+        -: 1727:      return _Tp(2.0) * std::log(std::sqrt(_Tp(0.5) * (__z + _Tp(1.0)))
+        -: 1728:				 + std::sqrt(_Tp(0.5) * (__z - _Tp(1.0))));
+        -: 1729:    }
+        -: 1730:
+        -: 1731:#if _GLIBCXX_USE_C99_COMPLEX_TR1
+        -: 1732:  inline __complex__ float
+        -: 1733:  __complex_acosh(__complex__ float __z)
+        -: 1734:  { return __builtin_cacoshf(__z); }
+        -: 1735:
+        -: 1736:  inline __complex__ double
+        -: 1737:  __complex_acosh(__complex__ double __z)
+        -: 1738:  { return __builtin_cacosh(__z); }
+        -: 1739:
+        -: 1740:  inline __complex__ long double
+        -: 1741:  __complex_acosh(const __complex__ long double& __z)
+        -: 1742:  { return __builtin_cacoshl(__z); }
+        -: 1743:
+        -: 1744:  template<typename _Tp>
+        -: 1745:    inline std::complex<_Tp>
+        -: 1746:    acosh(const std::complex<_Tp>& __z)
+        -: 1747:    { return __complex_acosh(__z.__rep()); }
+        -: 1748:#else
+        -: 1749:  /// acosh(__z) [8.1.5].
+        -: 1750:  //  Effects:  Behaves the same as C99 function cacosh, defined
+        -: 1751:  //            in subclause 7.3.6.1.
+        -: 1752:  template<typename _Tp>
+        -: 1753:    inline std::complex<_Tp>
+        -: 1754:    acosh(const std::complex<_Tp>& __z)
+        -: 1755:    { return __complex_acosh(__z); }
+        -: 1756:#endif
+        -: 1757:
+        -: 1758:  template<typename _Tp>
+        -: 1759:    std::complex<_Tp>
+        -: 1760:    __complex_asinh(const std::complex<_Tp>& __z)
+        -: 1761:    {
+        -: 1762:      std::complex<_Tp> __t((__z.real() - __z.imag())
+        -: 1763:			    * (__z.real() + __z.imag()) + _Tp(1.0),
+        -: 1764:			    _Tp(2.0) * __z.real() * __z.imag());
+        -: 1765:      __t = std::sqrt(__t);
+        -: 1766:
+        -: 1767:      return std::log(__t + __z);
+        -: 1768:    }
+        -: 1769:
+        -: 1770:#if _GLIBCXX_USE_C99_COMPLEX_TR1
+        -: 1771:  inline __complex__ float
+        -: 1772:  __complex_asinh(__complex__ float __z)
+        -: 1773:  { return __builtin_casinhf(__z); }
+        -: 1774:
+        -: 1775:  inline __complex__ double
+        -: 1776:  __complex_asinh(__complex__ double __z)
+        -: 1777:  { return __builtin_casinh(__z); }
+        -: 1778:
+        -: 1779:  inline __complex__ long double
+        -: 1780:  __complex_asinh(const __complex__ long double& __z)
+        -: 1781:  { return __builtin_casinhl(__z); }
+        -: 1782:
+        -: 1783:  template<typename _Tp>
+        -: 1784:    inline std::complex<_Tp>
+        -: 1785:    asinh(const std::complex<_Tp>& __z)
+        -: 1786:    { return __complex_asinh(__z.__rep()); }
+        -: 1787:#else
+        -: 1788:  /// asinh(__z) [8.1.6].
+        -: 1789:  //  Effects:  Behaves the same as C99 function casin, defined
+        -: 1790:  //            in subclause 7.3.6.2.
+        -: 1791:  template<typename _Tp>
+        -: 1792:    inline std::complex<_Tp>
+        -: 1793:    asinh(const std::complex<_Tp>& __z)
+        -: 1794:    { return __complex_asinh(__z); }
+        -: 1795:#endif
+        -: 1796:
+        -: 1797:  template<typename _Tp>
+        -: 1798:    std::complex<_Tp>
+        -: 1799:    __complex_atanh(const std::complex<_Tp>& __z)
+        -: 1800:    {
+        -: 1801:      const _Tp __i2 = __z.imag() * __z.imag();
+        -: 1802:      const _Tp __x = _Tp(1.0) - __i2 - __z.real() * __z.real();
+        -: 1803:
+        -: 1804:      _Tp __num = _Tp(1.0) + __z.real();
+        -: 1805:      _Tp __den = _Tp(1.0) - __z.real();
+        -: 1806:
+        -: 1807:      __num = __i2 + __num * __num;
+        -: 1808:      __den = __i2 + __den * __den;
+        -: 1809:
+        -: 1810:      return std::complex<_Tp>(_Tp(0.25) * (log(__num) - log(__den)),
+        -: 1811:			       _Tp(0.5) * atan2(_Tp(2.0) * __z.imag(), __x));
+        -: 1812:    }
+        -: 1813:
+        -: 1814:#if _GLIBCXX_USE_C99_COMPLEX_TR1
+        -: 1815:  inline __complex__ float
+        -: 1816:  __complex_atanh(__complex__ float __z)
+        -: 1817:  { return __builtin_catanhf(__z); }
+        -: 1818:
+        -: 1819:  inline __complex__ double
+        -: 1820:  __complex_atanh(__complex__ double __z)
+        -: 1821:  { return __builtin_catanh(__z); }
+        -: 1822:
+        -: 1823:  inline __complex__ long double
+        -: 1824:  __complex_atanh(const __complex__ long double& __z)
+        -: 1825:  { return __builtin_catanhl(__z); }
+        -: 1826:
+        -: 1827:  template<typename _Tp>
+        -: 1828:    inline std::complex<_Tp>
+        -: 1829:    atanh(const std::complex<_Tp>& __z)
+        -: 1830:    { return __complex_atanh(__z.__rep()); }
+        -: 1831:#else
+        -: 1832:  /// atanh(__z) [8.1.7].
+        -: 1833:  //  Effects:  Behaves the same as C99 function catanh, defined
+        -: 1834:  //            in subclause 7.3.6.3.
+        -: 1835:  template<typename _Tp>
+        -: 1836:    inline std::complex<_Tp>
+        -: 1837:    atanh(const std::complex<_Tp>& __z)
+        -: 1838:    { return __complex_atanh(__z); }
+        -: 1839:#endif
+        -: 1840:
+        -: 1841:  template<typename _Tp>
+        -: 1842:    inline _Tp
+        -: 1843:    /// fabs(__z) [8.1.8].
+        -: 1844:    //  Effects:  Behaves the same as C99 function cabs, defined
+        -: 1845:    //            in subclause 7.3.8.1.
+        -: 1846:    fabs(const std::complex<_Tp>& __z)
+        -: 1847:    { return std::abs(__z); }
+        -: 1848:
+        -: 1849:  /// Additional overloads [8.1.9].
+        -: 1850:  template<typename _Tp>
+        -: 1851:    inline typename __gnu_cxx::__promote<_Tp>::__type
+        -: 1852:    arg(_Tp __x)
+        -: 1853:    {
+        -: 1854:      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+        -: 1855:#if (_GLIBCXX11_USE_C99_MATH && !_GLIBCXX_USE_C99_FP_MACROS_DYNAMIC)
+        -: 1856:      return std::signbit(__x) ? __type(3.1415926535897932384626433832795029L)
+        -: 1857:	                       : __type();
+        -: 1858:#else
+        -: 1859:      return std::arg(std::complex<__type>(__x));
+        -: 1860:#endif
+        -: 1861:    }
+        -: 1862:
+        -: 1863:  template<typename _Tp>
+        -: 1864:    _GLIBCXX_CONSTEXPR inline typename __gnu_cxx::__promote<_Tp>::__type
+        -: 1865:    imag(_Tp)
+        -: 1866:    { return _Tp(); }
+        -: 1867:
+        -: 1868:  template<typename _Tp>
+        -: 1869:    _GLIBCXX20_CONSTEXPR inline typename __gnu_cxx::__promote<_Tp>::__type
+        -: 1870:    norm(_Tp __x)
+        -: 1871:    {
+        -: 1872:      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+        -: 1873:      return __type(__x) * __type(__x);
+        -: 1874:    }
+        -: 1875:
+        -: 1876:  template<typename _Tp>
+        -: 1877:    _GLIBCXX_CONSTEXPR inline typename __gnu_cxx::__promote<_Tp>::__type
+        -: 1878:    real(_Tp __x)
+        -: 1879:    { return __x; }
+        -: 1880:
+        -: 1881:  template<typename _Tp, typename _Up>
+        -: 1882:    inline std::complex<typename __gnu_cxx::__promote_2<_Tp, _Up>::__type>
+        -: 1883:    pow(const std::complex<_Tp>& __x, const _Up& __y)
+        -: 1884:    {
+        -: 1885:      typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
+        -: 1886:      return std::pow(std::complex<__type>(__x), __type(__y));
+        -: 1887:    }
+        -: 1888:
+        -: 1889:  template<typename _Tp, typename _Up>
+        -: 1890:    inline std::complex<typename __gnu_cxx::__promote_2<_Tp, _Up>::__type>
+        -: 1891:    pow(const _Tp& __x, const std::complex<_Up>& __y)
+        -: 1892:    {
+        -: 1893:      typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
+        -: 1894:      return std::pow(__type(__x), std::complex<__type>(__y));
+        -: 1895:    }
+        -: 1896:
+        -: 1897:  template<typename _Tp, typename _Up>
+        -: 1898:    inline std::complex<typename __gnu_cxx::__promote_2<_Tp, _Up>::__type>
+        -: 1899:    pow(const std::complex<_Tp>& __x, const std::complex<_Up>& __y)
+        -: 1900:    {
+        -: 1901:      typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
+        -: 1902:      return std::pow(std::complex<__type>(__x),
+        -: 1903:		      std::complex<__type>(__y));
+        -: 1904:    }
+        -: 1905:
+        -: 1906:  // Forward declarations.
+        -: 1907:  // DR 781.
+        -: 1908:  template<typename _Tp>
+        -: 1909:    std::complex<_Tp> proj(const std::complex<_Tp>&);
+        -: 1910:
+        -: 1911:  // Generic implementation of std::proj, does not work for infinities.
+        -: 1912:  template<typename _Tp>
+        -: 1913:    inline std::complex<_Tp>
+        -: 1914:    __complex_proj(const std::complex<_Tp>& __z)
+        -: 1915:    { return __z; }
+        -: 1916:
+        -: 1917:#if _GLIBCXX_USE_C99_COMPLEX
+        -: 1918:  inline complex<float>
+        -: 1919:  __complex_proj(const complex<float>& __z)
+        -: 1920:  { return __builtin_cprojf(__z.__rep()); }
+        -: 1921:
+        -: 1922:  inline complex<double>
+        -: 1923:  __complex_proj(const complex<double>& __z)
+        -: 1924:  { return __builtin_cproj(__z.__rep()); }
+        -: 1925:
+        -: 1926:  inline complex<long double>
+        -: 1927:  __complex_proj(const complex<long double>& __z)
+        -: 1928:  { return __builtin_cprojl(__z.__rep()); }
+        -: 1929:#elif defined _GLIBCXX_USE_C99_MATH_TR1
+        -: 1930:  inline complex<float>
+        -: 1931:  __complex_proj(const complex<float>& __z)
+        -: 1932:  {
+        -: 1933:    if (__builtin_isinf(__z.real()) || __builtin_isinf(__z.imag()))
+        -: 1934:      return complex<float>(__builtin_inff(),
+        -: 1935:			    __builtin_copysignf(0.0f, __z.imag()));
+        -: 1936:    return __z;
+        -: 1937:  }
+        -: 1938:
+        -: 1939:  inline complex<double>
+        -: 1940:  __complex_proj(const complex<double>& __z)
+        -: 1941:  {
+        -: 1942:    if (__builtin_isinf(__z.real()) || __builtin_isinf(__z.imag()))
+        -: 1943:      return complex<double>(__builtin_inf(),
+        -: 1944:			     __builtin_copysign(0.0, __z.imag()));
+        -: 1945:    return __z;
+        -: 1946:  }
+        -: 1947:
+        -: 1948:  inline complex<long double>
+        -: 1949:  __complex_proj(const complex<long double>& __z)
+        -: 1950:  {
+        -: 1951:    if (__builtin_isinf(__z.real()) || __builtin_isinf(__z.imag()))
+        -: 1952:      return complex<long double>(__builtin_infl(),
+        -: 1953:				  __builtin_copysignl(0.0l, __z.imag()));
+        -: 1954:    return __z;
+        -: 1955:  }
+        -: 1956:#endif
+        -: 1957:
+        -: 1958:  template<typename _Tp>
+        -: 1959:    inline std::complex<_Tp>
+        -: 1960:    proj(const std::complex<_Tp>& __z)
+        -: 1961:    { return __complex_proj(__z); }
+        -: 1962:
+        -: 1963:  // Overload for scalars
+        -: 1964:  template<typename _Tp>
+        -: 1965:    inline std::complex<typename __gnu_cxx::__promote<_Tp>::__type>
+        -: 1966:    proj(_Tp __x)
+        -: 1967:    {
+        -: 1968:      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+        -: 1969:      return std::proj(std::complex<__type>(__x));
+        -: 1970:    }
+        -: 1971:
+        -: 1972:  template<typename _Tp>
+        -: 1973:    inline _GLIBCXX20_CONSTEXPR
+        -: 1974:	std::complex<typename __gnu_cxx::__promote<_Tp>::__type>
+        -: 1975:    conj(_Tp __x)
+        -: 1976:    {
+        -: 1977:      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+        -: 1978:      return std::complex<__type>(__x, -__type());
+        -: 1979:    }
+        -: 1980:
+        -: 1981:#if __cplusplus > 201103L
+        -: 1982:
+        -: 1983:inline namespace literals {
+        -: 1984:inline namespace complex_literals {
+        -: 1985:#pragma GCC diagnostic push
+        -: 1986:#pragma GCC diagnostic ignored "-Wliteral-suffix"
+        -: 1987:#define __cpp_lib_complex_udls 201309
+        -: 1988:
+        -: 1989:  constexpr std::complex<float>
+        -: 1990:  operator""if(long double __num)
+        -: 1991:  { return std::complex<float>{0.0F, static_cast<float>(__num)}; }
+        -: 1992:
+        -: 1993:  constexpr std::complex<float>
+        -: 1994:  operator""if(unsigned long long __num)
+        -: 1995:  { return std::complex<float>{0.0F, static_cast<float>(__num)}; }
+        -: 1996:
+        -: 1997:  constexpr std::complex<double>
+        -: 1998:  operator""i(long double __num)
+        -: 1999:  { return std::complex<double>{0.0, static_cast<double>(__num)}; }
+        -: 2000:
+        -: 2001:  constexpr std::complex<double>
+        -: 2002:  operator""i(unsigned long long __num)
+        -: 2003:  { return std::complex<double>{0.0, static_cast<double>(__num)}; }
+        -: 2004:
+        -: 2005:  constexpr std::complex<long double>
+        -: 2006:  operator""il(long double __num)
+        -: 2007:  { return std::complex<long double>{0.0L, __num}; }
+        -: 2008:
+        -: 2009:  constexpr std::complex<long double>
+        -: 2010:  operator""il(unsigned long long __num)
+        -: 2011:  { return std::complex<long double>{0.0L, static_cast<long double>(__num)}; }
+        -: 2012:
+        -: 2013:#pragma GCC diagnostic pop
+        -: 2014:} // inline namespace complex_literals
+        -: 2015:} // inline namespace literals
+        -: 2016:
+        -: 2017:#endif // C++14
+        -: 2018:
+        -: 2019:_GLIBCXX_END_NAMESPACE_VERSION
+        -: 2020:} // namespace
+        -: 2021:
+        -: 2022:#endif  // C++11
+        -: 2023:
+        -: 2024:#endif  /* _GLIBCXX_COMPLEX */
