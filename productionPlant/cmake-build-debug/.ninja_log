@@ -1,8 +1,0 @@
-# ninja log v5
-29	1646	6713258643192865	CMakeFiles/productionPlant.dir/plant.cpp.obj	e286410a4417303c
-1646	2388	6713258650139784	productionPlant.exe	ed709097767b0fec
-1	1632	6713258643083152	CMakeFiles/productionPlant.dir/main.cpp.obj	28cd1aee27d66c08
-0	2081	6717880786001133	CMakeFiles/productionPlant.dir/main.cpp.obj	28cd1aee27d66c08
-245	2109	6717880786435067	CMakeFiles/productionPlant.dir/plant.cpp.obj	e286410a4417303c
-253	2131	6717880786664467	CMakeFiles/productionPlant.dir/twoWorker.cpp.obj	9fd438b1177f2d92
-2132	2877	6717880793404871	productionPlant.exe	cad7767d508112c1

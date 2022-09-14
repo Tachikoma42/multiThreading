@@ -1,0 +1,5 @@
+# ninja log v5
+0	2066	6718373083625236	CMakeFiles/myTestProduct.dir/plant.cpp.obj	fe909693a8372e3a
+6	1778	6718373080655367	CMakeFiles/myTestProduct.dir/twoWorker.cpp.obj	71a97c7dbdf508a2
+10	1851	6718373081421203	CMakeFiles/myTestProduct.dir/Source.cpp.obj	7981d73e57818bae
+2067	2266	6718373085128600	myTestProduct.exe	8c4ff22c8c045e5c

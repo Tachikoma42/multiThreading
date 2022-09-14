@@ -1,3 +1,0 @@
-C:/Users/xkzmx/Documents/Odyssey/School/Thread/MultiPlayground/build/CMakeFiles/MultiPlayground.dir
-C:/Users/xkzmx/Documents/Odyssey/School/Thread/MultiPlayground/build/CMakeFiles/edit_cache.dir
-C:/Users/xkzmx/Documents/Odyssey/School/Thread/MultiPlayground/build/CMakeFiles/rebuild_cache.dir

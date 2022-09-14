@@ -1,3 +1,0 @@
-C:/Users/xkzmx/Documents/Odyssey/School/Thread/ProductionPlant/cmake-build-debug/CMakeFiles/ProductionPlant.dir
-C:/Users/xkzmx/Documents/Odyssey/School/Thread/ProductionPlant/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/xkzmx/Documents/Odyssey/School/Thread/ProductionPlant/cmake-build-debug/CMakeFiles/rebuild_cache.dir

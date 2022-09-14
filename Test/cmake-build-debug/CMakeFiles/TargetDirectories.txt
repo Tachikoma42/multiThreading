@@ -1,3 +1,0 @@
-C:/Users/xkzmx/Documents/Odyssey/School/Thread/Test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/xkzmx/Documents/Odyssey/School/Thread/Test/cmake-build-debug/CMakeFiles/Test.dir
-C:/Users/xkzmx/Documents/Odyssey/School/Thread/Test/cmake-build-debug/CMakeFiles/edit_cache.dir

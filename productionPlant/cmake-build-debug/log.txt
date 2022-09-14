@@ -1,2 +1,0 @@
-Updated Buffer State: (3,4,4,1,2)
-Updated Load Order: (0,0,1,0,0)

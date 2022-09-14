@@ -1,6 +1,0 @@
-# ninja log v5
-7	347	6725453114176442	build.ninja	8b5a01b2b6ba7b4a
-0	1292	6718371940236871	CMakeFiles/myTestProduct.dir/twoWorker.cpp.obj	690750471cef4182
-8	1436	6718371941692033	CMakeFiles/myTestProduct.dir/plant.cpp.obj	951e13affdec2826
-4	1340	6718371940710837	CMakeFiles/myTestProduct.dir/Source.cpp.obj	a1f6d2466329f634
-1436	2179	6718371949009035	myTestProduct.exe	1fbe6bfbc97357dc

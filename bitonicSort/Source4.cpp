@@ -1,6 +1,3 @@
-//Sihao Ren; sren03
-//four threads
-
 #include <iostream>
 #include <vector>
 #include <thread>

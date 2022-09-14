@@ -1,4 +1,0 @@
-C:\Users\xkzmx\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.6777.58\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/xkzmx/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.6777.58/bin/ninja/win/ninja.exe -G Ninja C:\Users\xkzmx\Documents\Odyssey\School\Thread\ClassExample\matrix
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Users/xkzmx/Documents/Odyssey/School/Thread/ClassExample/matrix/cmake-build-debug

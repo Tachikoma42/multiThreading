@@ -1,0 +1,2427 @@
+Current Time: 672952543 us
+Iteration: 1
+Part Worker ID: 2
+Status: New Load Order
+Accumulated Wait Time: 1 us
+Buffer State: (0,0,0,0,0)
+Load Order: (2,1,0,1,1)
+Accumulated counter: 1
+1
+Updated Buffer State: (2,1,0,1,1)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 672956879 us
+Iteration: 1
+Part Worker ID: 3
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (2,1,0,1,1)
+Load Order: (1,1,1,1,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (3,2,1,2,2)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 672967734 us
+Iteration: 1
+Part Worker ID: 4
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (2,2,0,1,2)
+Load Order: (1,1,1,1,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (3,3,1,2,3)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 672970698 us
+Iteration: 1
+Part Worker ID: 5
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (3,3,1,2,3)
+Load Order: (2,1,0,1,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,4,1,3,3)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 672973136 us
+Iteration: 1
+Part Worker ID: 12
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (5,4,1,3,3)
+Load Order: (1,0,2,1,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,4,3,3,3)
+Updated Load Order: (1,0,0,1,1)
+
+Current Time: 672975255 us
+Iteration: 1
+Part Worker ID: 15
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (5,4,3,3,3)
+Load Order: (1,2,0,1,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,5,3,3,3)
+Updated Load Order: (1,1,0,1,1)
+
+Current Time: 672978038 us
+Iteration: 1
+Part Worker ID: 7
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (5,5,3,3,3)
+Load Order: (0,1,2,2,0)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,5,4,3,3)
+Updated Load Order: (0,1,1,2,0)
+
+Current Time: 672982714 us
+Iteration: 2
+Part Worker ID: 2
+Status: New Load Order
+Accumulated Wait Time: 1 us
+Buffer State: (5,4,2,3,1)
+Load Order: (1,0,2,1,1)
+Accumulated counter: 1
+1
+Updated Buffer State: (5,4,4,3,2)
+Updated Load Order: (1,0,0,1,0)
+
+Current Time: 672985674 us
+Iteration: 1
+Part Worker ID: 13
+Status: New Load Order
+Accumulated Wait Time: 1 us
+Buffer State: (5,4,4,3,2)
+Load Order: (1,2,0,1,1)
+Accumulated counter: 1
+1
+Updated Buffer State: (5,5,4,3,3)
+Updated Load Order: (1,1,0,1,0)
+
+Current Time: 672999147 us
+Iteration: 2
+Part Worker ID: 4
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (2,5,4,2,2)
+Load Order: (1,1,1,1,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (3,5,4,3,3)
+Updated Load Order: (0,1,1,0,0)
+
+Current Time: 673001245 us
+Iteration: 1
+Part Worker ID: 14
+Status: New Load Order
+Accumulated Wait Time: 20916 us
+Buffer State: (3,5,4,3,3)
+Load Order: (1,0,1,0,3)
+Accumulated counter: 1
+20916
+Updated Buffer State: (4,5,4,3,3)
+Updated Load Order: (0,0,1,0,3)
+
+Current Time: 673013878 us
+Iteration: 1
+Part Worker ID: 14
+Status: Wakeup-Timeout
+Accumulated Wait Time: 20916 us
+Buffer State: (4,3,0,0,2)
+Load Order: (0,0,1,0,3)
+Accumulated counter: 2
+20916
+0
+Updated Buffer State: (4,3,0,0,2)
+Updated Load Order: (0,0,1,0,3)
+
+Current Time: 673021071 us
+Iteration: 1
+Part Worker ID: 18
+Status: Wakeup-Timeout
+Accumulated Wait Time: 20888 us
+Buffer State: (4,3,0,0,2)
+Load Order: (0,1,1,0,3)
+Accumulated counter: 1
+20888
+Updated Buffer State: (4,3,0,0,2)
+Updated Load Order: (0,1,1,0,3)
+
+Current Time: 673077046 us
+Iteration: 2
+Part Worker ID: 3
+Status: New Load Order
+Accumulated Wait Time: 33 us
+Buffer State: (0,0,0,0,0)
+Load Order: (1,0,1,2,1)
+Accumulated counter: 1
+33
+Updated Buffer State: (1,0,1,2,1)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673079384 us
+Iteration: 1
+Part Worker ID: 11
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (1,0,1,2,1)
+Load Order: (2,2,1,0,0)
+Accumulated counter: 1
+0
+Updated Buffer State: (3,2,2,2,1)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673108493 us
+Iteration: 3
+Part Worker ID: 3
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (0,1,1,0,0)
+Load Order: (0,2,1,0,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (0,3,2,0,2)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673109597 us
+Iteration: 1
+Part Worker ID: 20
+Status: New Load Order
+Accumulated Wait Time: 129286 us
+Buffer State: (0,3,2,0,2)
+Load Order: (2,0,1,2,0)
+Accumulated counter: 1
+129286
+Updated Buffer State: (2,3,3,2,2)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673110491 us
+Iteration: 1
+Part Worker ID: 1
+Status: New Load Order
+Accumulated Wait Time: 130187 us
+Buffer State: (2,3,3,2,2)
+Load Order: (2,0,1,1,1)
+Accumulated counter: 1
+130187
+Updated Buffer State: (4,3,4,3,3)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673111293 us
+Iteration: 1
+Part Worker ID: 9
+Status: New Load Order
+Accumulated Wait Time: 131000 us
+Buffer State: (4,3,4,3,3)
+Load Order: (0,1,1,1,2)
+Accumulated counter: 1
+131000
+Updated Buffer State: (4,4,4,3,3)
+Updated Load Order: (0,0,1,1,2)
+
+Current Time: 673112268 us
+Iteration: 1
+Part Worker ID: 17
+Status: New Load Order
+Accumulated Wait Time: 131983 us
+Buffer State: (4,4,4,3,3)
+Load Order: (1,0,2,1,1)
+Accumulated counter: 1
+131983
+Updated Buffer State: (5,4,4,3,3)
+Updated Load Order: (0,0,2,1,1)
+
+Current Time: 673113197 us
+Iteration: 1
+Part Worker ID: 7
+Status: Wakeup-Notified
+Accumulated Wait Time: 132933 us
+Buffer State: (5,4,4,3,3)
+Load Order: (0,1,1,2,0)
+Accumulated counter: 2
+0
+132933
+Updated Buffer State: (5,5,4,3,3)
+Updated Load Order: (0,0,1,2,0)
+
+Current Time: 673124154 us
+Iteration: 1
+Part Worker ID: 15
+Status: Wakeup-Timeout
+Accumulated Wait Time: 136961 us
+Buffer State: (2,3,1,2,2)
+Load Order: (1,1,0,1,1)
+Accumulated counter: 2
+0
+136961
+Updated Buffer State: (2,3,1,2,2)
+Updated Load Order: (1,1,0,1,1)
+
+Current Time: 673127199 us
+Iteration: 1
+Part Worker ID: 7
+Status: Wakeup-Timeout
+Accumulated Wait Time: 132933 us
+Buffer State: (2,3,1,2,2)
+Load Order: (0,0,1,2,0)
+Accumulated counter: 3
+0
+132933
+0
+Updated Buffer State: (2,3,1,2,2)
+Updated Load Order: (0,0,1,2,0)
+
+Current Time: 673128785 us
+Iteration: 1
+Part Worker ID: 9
+Status: Wakeup-Timeout
+Accumulated Wait Time: 131000 us
+Buffer State: (2,3,1,2,2)
+Load Order: (0,0,1,1,2)
+Accumulated counter: 2
+131000
+0
+Updated Buffer State: (2,3,1,2,2)
+Updated Load Order: (0,0,1,1,2)
+
+Current Time: 673130757 us
+Iteration: 1
+Part Worker ID: 17
+Status: Wakeup-Timeout
+Accumulated Wait Time: 131983 us
+Buffer State: (2,3,1,2,2)
+Load Order: (0,0,2,1,1)
+Accumulated counter: 2
+131983
+0
+Updated Buffer State: (2,3,1,2,2)
+Updated Load Order: (0,0,2,1,1)
+
+Current Time: 673139889 us
+Iteration: 2
+Part Worker ID: 20
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (2,3,1,2,2)
+Load Order: (2,1,1,1,0)
+Accumulated counter: 1
+0
+Updated Buffer State: (4,4,2,3,2)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673141097 us
+Iteration: 1
+Part Worker ID: 8
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (4,4,2,3,2)
+Load Order: (1,1,0,0,3)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,5,2,3,3)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 673141929 us
+Iteration: 1
+Part Worker ID: 19
+Status: New Load Order
+Accumulated Wait Time: 153374 us
+Buffer State: (5,5,2,3,3)
+Load Order: (1,1,2,1,0)
+Accumulated counter: 1
+153374
+Updated Buffer State: (5,5,4,3,3)
+Updated Load Order: (1,1,0,1,0)
+
+Current Time: 673155054 us
+Iteration: 1
+Part Worker ID: 13
+Status: Wakeup-Timeout
+Accumulated Wait Time: 154394 us
+Buffer State: (4,2,3,3,3)
+Load Order: (1,1,0,1,0)
+Accumulated counter: 2
+1
+154393
+Updated Buffer State: (4,2,3,3,3)
+Updated Load Order: (1,1,0,1,0)
+
+Current Time: 673156330 us
+Iteration: 1
+Part Worker ID: 19
+Status: Wakeup-Timeout
+Accumulated Wait Time: 153374 us
+Buffer State: (4,2,3,3,3)
+Load Order: (1,1,0,1,0)
+Accumulated counter: 2
+153374
+0
+Updated Buffer State: (4,2,3,3,3)
+Updated Load Order: (1,1,0,1,0)
+
+Current Time: 673157318 us
+Iteration: 2
+Part Worker ID: 2
+Status: Wakeup-Timeout
+Accumulated Wait Time: 156269 us
+Buffer State: (4,2,3,3,3)
+Load Order: (1,0,0,1,0)
+Accumulated counter: 2
+1
+156268
+Updated Buffer State: (4,2,3,3,3)
+Updated Load Order: (1,0,0,1,0)
+
+Current Time: 673158163 us
+Iteration: 2
+Part Worker ID: 15
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (4,2,3,3,3)
+Load Order: (1,1,1,1,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,3,4,3,3)
+Updated Load Order: (0,0,0,1,1)
+
+Current Time: 673170840 us
+Iteration: 3
+Part Worker ID: 20
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (4,3,2,1,3)
+Load Order: (1,1,1,0,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,4,3,1,3)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 673186234 us
+Iteration: 2
+Part Worker ID: 13
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (2,4,2,1,2)
+Load Order: (1,3,0,1,0)
+Accumulated counter: 1
+0
+Updated Buffer State: (3,5,2,2,2)
+Updated Load Order: (0,2,0,0,0)
+
+Current Time: 673201135 us
+Iteration: 1
+Part Worker ID: 10
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (3,5,2,0,2)
+Load Order: (1,1,0,1,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (4,5,2,1,3)
+Updated Load Order: (0,1,0,0,1)
+
+Current Time: 673232983 us
+Iteration: 2
+Part Worker ID: 11
+Status: New Load Order
+Accumulated Wait Time: 1 us
+Buffer State: (3,3,2,1,2)
+Load Order: (3,1,0,0,1)
+Accumulated counter: 1
+1
+Updated Buffer State: (5,4,2,1,3)
+Updated Load Order: (1,0,0,0,0)
+
+Current Time: 673296117 us
+Iteration: 2
+Part Worker ID: 1
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (0,1,0,0,3)
+Load Order: (1,1,2,1,0)
+Accumulated counter: 1
+0
+Updated Buffer State: (1,2,2,1,3)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673312225 us
+Iteration: 1
+Part Worker ID: 6
+Status: New Load Order
+Accumulated Wait Time: 323648 us
+Buffer State: (0,1,0,1,3)
+Load Order: (0,0,0,2,3)
+Accumulated counter: 1
+323648
+Updated Buffer State: (0,1,0,3,3)
+Updated Load Order: (0,0,0,0,3)
+
+Current Time: 673316561 us
+Iteration: 2
+Part Worker ID: 18
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (0,1,0,3,3)
+Load Order: (0,1,1,0,3)
+Accumulated counter: 1
+0
+Updated Buffer State: (0,2,1,3,3)
+Updated Load Order: (0,0,0,0,3)
+
+Current Time: 673317603 us
+Iteration: 2
+Part Worker ID: 17
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (0,2,1,3,3)
+Load Order: (0,0,3,1,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (0,2,4,3,3)
+Updated Load Order: (0,0,0,1,1)
+
+Current Time: 673318459 us
+Iteration: 2
+Part Worker ID: 4
+Status: Wakeup-Notified
+Accumulated Wait Time: 317284 us
+Buffer State: (0,2,4,3,3)
+Load Order: (0,1,1,0,0)
+Accumulated counter: 2
+0
+317284
+Updated Buffer State: (0,3,4,3,3)
+Updated Load Order: (0,0,1,0,0)
+
+Current Time: 673328165 us
+Iteration: 2
+Part Worker ID: 15
+Status: Wakeup-Timeout
+Accumulated Wait Time: 160505 us
+Buffer State: (0,3,2,3,1)
+Load Order: (0,0,0,1,1)
+Accumulated counter: 2
+0
+160505
+Updated Buffer State: (0,3,2,3,1)
+Updated Load Order: (0,0,0,1,1)
+
+Current Time: 673329054 us
+Iteration: 1
+Part Worker ID: 6
+Status: Wakeup-Timeout
+Accumulated Wait Time: 323648 us
+Buffer State: (0,3,2,3,1)
+Load Order: (0,0,0,0,3)
+Accumulated counter: 2
+323648
+0
+Updated Buffer State: (0,3,2,3,1)
+Updated Load Order: (0,0,0,0,3)
+
+Current Time: 673329666 us
+Iteration: 1
+Part Worker ID: 8
+Status: Wakeup-Timeout
+Accumulated Wait Time: 174632 us
+Buffer State: (0,3,2,3,1)
+Load Order: (0,0,0,0,2)
+Accumulated counter: 2
+0
+174632
+Updated Buffer State: (0,3,2,3,1)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 673330408 us
+Iteration: 2
+Part Worker ID: 4
+Status: Wakeup-Timeout
+Accumulated Wait Time: 317284 us
+Buffer State: (0,3,2,3,1)
+Load Order: (0,0,1,0,0)
+Accumulated counter: 3
+0
+317284
+0
+Updated Buffer State: (0,3,2,3,1)
+Updated Load Order: (0,0,1,0,0)
+
+Current Time: 673332178 us
+Iteration: 3
+Part Worker ID: 1
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (0,3,2,3,1)
+Load Order: (0,0,2,3,0)
+Accumulated counter: 1
+0
+Updated Buffer State: (0,3,4,3,1)
+Updated Load Order: (0,0,0,3,0)
+
+Current Time: 673343793 us
+Iteration: 1
+Part Worker ID: 5
+Status: Wakeup-Notified
+Accumulated Wait Time: 370688 us
+Buffer State: (0,1,4,3,1)
+Load Order: (0,0,0,0,1)
+Accumulated counter: 2
+0
+370688
+Updated Buffer State: (0,1,4,3,2)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673344683 us
+Iteration: 2
+Part Worker ID: 19
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (0,1,4,3,2)
+Load Order: (2,1,0,2,0)
+Accumulated counter: 1
+0
+Updated Buffer State: (2,2,4,3,2)
+Updated Load Order: (0,0,0,2,0)
+
+Current Time: 673359822 us
+Iteration: 3
+Part Worker ID: 15
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (1,2,2,3,0)
+Load Order: (0,0,1,2,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (1,2,3,3,2)
+Updated Load Order: (0,0,0,2,0)
+
+Current Time: 673375695 us
+Iteration: 1
+Part Worker ID: 12
+Status: Wakeup-Notified
+Accumulated Wait Time: 400465 us
+Buffer State: (1,1,1,1,2)
+Load Order: (1,0,0,1,1)
+Accumulated counter: 2
+0
+400465
+Updated Buffer State: (2,1,1,2,3)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673423452 us
+Iteration: 4
+Part Worker ID: 3
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (0,0,1,0,0)
+Load Order: (1,2,1,0,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (1,2,2,0,1)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673454667 us
+Iteration: 5
+Part Worker ID: 3
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (1,2,0,0,0)
+Load Order: (0,0,0,1,4)
+Accumulated counter: 1
+0
+Updated Buffer State: (1,2,0,1,3)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 673456138 us
+Iteration: 2
+Part Worker ID: 7
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (1,2,0,1,3)
+Load Order: (0,0,2,2,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (1,2,2,3,3)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 673485515 us
+Iteration: 2
+Part Worker ID: 18
+Status: Wakeup-Timeout
+Accumulated Wait Time: 152773 us
+Buffer State: (0,0,0,1,3)
+Load Order: (0,0,0,0,3)
+Accumulated counter: 2
+0
+152773
+Updated Buffer State: (0,0,0,1,3)
+Updated Load Order: (0,0,0,0,3)
+
+Current Time: 673486984 us
+Iteration: 2
+Part Worker ID: 17
+Status: Wakeup-Notified
+Accumulated Wait Time: 167086 us
+Buffer State: (0,0,0,1,3)
+Load Order: (0,0,0,1,1)
+Accumulated counter: 2
+0
+167086
+Updated Buffer State: (0,0,0,2,3)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 673487697 us
+Iteration: 3
+Part Worker ID: 1
+Status: Wakeup-Notified
+Accumulated Wait Time: 154609 us
+Buffer State: (0,0,0,2,3)
+Load Order: (0,0,0,3,0)
+Accumulated counter: 2
+0
+154609
+Updated Buffer State: (0,0,0,3,3)
+Updated Load Order: (0,0,0,2,0)
+
+Current Time: 673488286 us
+Iteration: 2
+Part Worker ID: 13
+Status: Wakeup-Notified
+Accumulated Wait Time: 301097 us
+Buffer State: (0,0,0,3,3)
+Load Order: (0,2,0,0,0)
+Accumulated counter: 2
+0
+301097
+Updated Buffer State: (0,2,0,3,3)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673489011 us
+Iteration: 2
+Part Worker ID: 6
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (0,2,0,3,3)
+Load Order: (1,0,0,0,4)
+Accumulated counter: 1
+0
+Updated Buffer State: (1,2,0,3,3)
+Updated Load Order: (0,0,0,0,4)
+
+Current Time: 673489859 us
+Iteration: 3
+Part Worker ID: 4
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (1,2,0,3,3)
+Load Order: (0,0,1,1,3)
+Accumulated counter: 1
+0
+Updated Buffer State: (1,2,1,3,3)
+Updated Load Order: (0,0,0,1,3)
+
+Current Time: 673501381 us
+Iteration: 3
+Part Worker ID: 1
+Status: Wakeup-Timeout
+Accumulated Wait Time: 154609 us
+Buffer State: (0,2,0,3,0)
+Load Order: (0,0,0,2,0)
+Accumulated counter: 3
+0
+154609
+0
+Updated Buffer State: (0,2,0,3,0)
+Updated Load Order: (0,0,0,2,0)
+
+Current Time: 673502478 us
+Iteration: 1
+Part Worker ID: 10
+Status: Wakeup-Notified
+Accumulated Wait Time: 295730 us
+Buffer State: (0,2,0,3,0)
+Load Order: (0,1,0,0,1)
+Accumulated counter: 2
+0
+295730
+Updated Buffer State: (0,3,0,3,1)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673503464 us
+Iteration: 2
+Part Worker ID: 17
+Status: Wakeup-Timeout
+Accumulated Wait Time: 167086 us
+Buffer State: (0,3,0,3,1)
+Load Order: (0,0,0,0,1)
+Accumulated counter: 3
+0
+167086
+0
+Updated Buffer State: (0,3,0,3,1)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 673504775 us
+Iteration: 2
+Part Worker ID: 5
+Status: New Load Order
+Accumulated Wait Time: 186 us
+Buffer State: (0,3,0,3,1)
+Load Order: (0,1,0,2,2)
+Accumulated counter: 1
+186
+Updated Buffer State: (0,4,0,3,3)
+Updated Load Order: (0,0,0,2,0)
+
+Current Time: 673516961 us
+Iteration: 3
+Part Worker ID: 18
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (0,4,0,3,1)
+Load Order: (0,1,0,0,4)
+Accumulated counter: 1
+0
+Updated Buffer State: (0,5,0,3,3)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 673518494 us
+Iteration: 1
+Part Worker ID: 16
+Status: New Load Order
+Accumulated Wait Time: 538217 us
+Buffer State: (0,5,0,3,3)
+Load Order: (1,1,0,1,2)
+Accumulated counter: 1
+538217
+Updated Buffer State: (1,5,0,3,3)
+Updated Load Order: (0,1,0,1,2)
+
+Current Time: 673580483 us
+Iteration: 3
+Part Worker ID: 20
+Status: Wakeup-Timeout
+Accumulated Wait Time: 394333 us
+Buffer State: (1,3,3,1,3)
+Load Order: (0,0,0,0,2)
+Accumulated counter: 2
+0
+394333
+Updated Buffer State: (1,3,3,1,3)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 673583805 us
+Iteration: 2
+Part Worker ID: 19
+Status: Wakeup-Notified
+Accumulated Wait Time: 235272 us
+Buffer State: (1,3,3,1,3)
+Load Order: (0,0,0,2,0)
+Accumulated counter: 2
+0
+235272
+Updated Buffer State: (1,3,3,3,3)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673585007 us
+Iteration: 5
+Part Worker ID: 3
+Status: Wakeup-Timeout
+Accumulated Wait Time: 109699 us
+Buffer State: (1,1,3,3,3)
+Load Order: (0,0,0,0,1)
+Accumulated counter: 2
+0
+109699
+Updated Buffer State: (1,1,3,3,3)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 673595826 us
+Iteration: 2
+Part Worker ID: 8
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (1,1,3,3,3)
+Load Order: (1,1,1,0,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (2,2,4,3,3)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 673611820 us
+Iteration: 4
+Part Worker ID: 20
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (2,1,4,3,3)
+Load Order: (0,1,0,2,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (2,2,4,3,3)
+Updated Load Order: (0,0,0,2,2)
+
+Current Time: 673613922 us
+Iteration: 2
+Part Worker ID: 11
+Status: Wakeup-Notified
+Accumulated Wait Time: 378232 us
+Buffer State: (2,2,4,3,3)
+Load Order: (1,0,0,0,0)
+Accumulated counter: 2
+1
+378231
+Updated Buffer State: (3,2,4,3,3)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673627927 us
+Iteration: 3
+Part Worker ID: 4
+Status: Wakeup-Timeout
+Accumulated Wait Time: 123369 us
+Buffer State: (3,1,2,3,1)
+Load Order: (0,0,0,1,3)
+Accumulated counter: 2
+0
+123369
+Updated Buffer State: (3,1,2,3,1)
+Updated Load Order: (0,0,0,1,3)
+
+Current Time: 673634648 us
+Iteration: 2
+Part Worker ID: 12
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (3,1,2,3,1)
+Load Order: (0,0,1,4,0)
+Accumulated counter: 1
+0
+Updated Buffer State: (3,1,3,3,1)
+Updated Load Order: (0,0,0,4,0)
+
+Current Time: 673638589 us
+Iteration: 3
+Part Worker ID: 15
+Status: Wakeup-Timeout
+Accumulated Wait Time: 252666 us
+Buffer State: (1,1,2,1,1)
+Load Order: (0,0,0,2,0)
+Accumulated counter: 2
+0
+252666
+Updated Buffer State: (1,1,2,1,1)
+Updated Load Order: (0,0,0,2,0)
+
+Current Time: 673642619 us
+Iteration: 3
+Part Worker ID: 11
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (1,1,2,1,1)
+Load Order: (0,1,1,0,3)
+Accumulated counter: 1
+0
+Updated Buffer State: (1,2,3,1,3)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 673643565 us
+Iteration: 2
+Part Worker ID: 5
+Status: Wakeup-Notified
+Accumulated Wait Time: 138249 us
+Buffer State: (1,2,3,1,3)
+Load Order: (0,0,0,2,0)
+Accumulated counter: 2
+186
+138063
+Updated Buffer State: (1,2,3,3,3)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673644490 us
+Iteration: 2
+Part Worker ID: 10
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (1,2,3,3,3)
+Load Order: (2,2,1,0,0)
+Accumulated counter: 1
+0
+Updated Buffer State: (3,4,4,3,3)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673645435 us
+Iteration: 3
+Part Worker ID: 17
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (3,4,4,3,3)
+Load Order: (1,2,0,0,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (4,5,4,3,3)
+Updated Load Order: (0,1,0,0,2)
+
+Current Time: 673658712 us
+Iteration: 4
+Part Worker ID: 4
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (1,5,3,2,3)
+Load Order: (0,0,0,2,3)
+Accumulated counter: 1
+0
+Updated Buffer State: (1,5,3,3,3)
+Updated Load Order: (0,0,0,1,3)
+
+Current Time: 673674647 us
+Iteration: 4
+Part Worker ID: 1
+Status: Wakeup-Timeout
+Accumulated Wait Time: 125860 us
+Buffer State: (0,5,1,1,3)
+Load Order: (0,1,0,0,0)
+Accumulated counter: 2
+0
+125860
+Updated Buffer State: (0,5,1,1,3)
+Updated Load Order: (0,1,0,0,0)
+
+Current Time: 673676539 us
+Iteration: 3
+Part Worker ID: 5
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (0,5,1,1,3)
+Load Order: (0,2,0,2,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (0,5,1,3,3)
+Updated Load Order: (0,2,0,0,1)
+
+Current Time: 673706428 us
+Iteration: 5
+Part Worker ID: 1
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (0,4,0,1,3)
+Load Order: (2,2,0,1,0)
+Accumulated counter: 1
+0
+Updated Buffer State: (2,5,0,2,3)
+Updated Load Order: (0,1,0,0,0)
+
+Current Time: 673708175 us
+Iteration: 3
+Part Worker ID: 2
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (2,5,0,2,3)
+Load Order: (1,1,0,1,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (3,5,0,3,3)
+Updated Load Order: (0,1,0,0,2)
+
+Current Time: 673721699 us
+Iteration: 2
+Part Worker ID: 14
+Status: Wakeup-Timeout
+Accumulated Wait Time: 144277 us
+Buffer State: (3,5,0,0,1)
+Load Order: (0,0,0,0,3)
+Accumulated counter: 2
+0
+144277
+Updated Buffer State: (3,5,0,0,1)
+Updated Load Order: (0,0,0,0,3)
+
+Current Time: 673737786 us
+Iteration: 2
+Part Worker ID: 6
+Status: Wakeup-Notified
+Accumulated Wait Time: 247936 us
+Buffer State: (3,5,0,0,1)
+Load Order: (0,0,0,0,4)
+Accumulated counter: 2
+0
+247936
+Updated Buffer State: (3,5,0,0,3)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 673753724 us
+Iteration: 2
+Part Worker ID: 6
+Status: Wakeup-Timeout
+Accumulated Wait Time: 247936 us
+Buffer State: (2,1,0,0,2)
+Load Order: (0,0,0,0,2)
+Accumulated counter: 3
+0
+247936
+0
+Updated Buffer State: (2,1,0,0,2)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 673800874 us
+Iteration: 3
+Part Worker ID: 11
+Status: Wakeup-Notified
+Accumulated Wait Time: 157354 us
+Buffer State: (0,0,0,0,2)
+Load Order: (0,0,0,0,1)
+Accumulated counter: 2
+0
+157354
+Updated Buffer State: (0,0,0,0,3)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673802597 us
+Iteration: 4
+Part Worker ID: 15
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (0,0,0,0,3)
+Load Order: (1,0,1,2,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (1,0,1,2,3)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 673816793 us
+Iteration: 3
+Part Worker ID: 18
+Status: Wakeup-Timeout
+Accumulated Wait Time: 283994 us
+Buffer State: (1,0,1,1,1)
+Load Order: (0,0,0,0,2)
+Accumulated counter: 2
+0
+283994
+Updated Buffer State: (1,0,1,1,1)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 673819887 us
+Iteration: 2
+Part Worker ID: 16
+Status: New Load Order
+Accumulated Wait Time: 42 us
+Buffer State: (1,0,1,1,1)
+Load Order: (0,2,0,1,2)
+Accumulated counter: 1
+42
+Updated Buffer State: (1,2,1,2,3)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673832578 us
+Iteration: 4
+Part Worker ID: 11
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (1,1,0,2,1)
+Load Order: (1,3,0,1,0)
+Accumulated counter: 1
+0
+Updated Buffer State: (2,4,0,3,1)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673847992 us
+Iteration: 4
+Part Worker ID: 18
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (2,4,0,1,0)
+Load Order: (1,0,1,1,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (3,4,1,2,2)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673850340 us
+Iteration: 2
+Part Worker ID: 7
+Status: Wakeup-Notified
+Accumulated Wait Time: 393474 us
+Buffer State: (3,4,1,2,2)
+Load Order: (0,0,0,0,1)
+Accumulated counter: 2
+0
+393474
+Updated Buffer State: (3,4,1,2,3)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673852548 us
+Iteration: 3
+Part Worker ID: 5
+Status: Wakeup-Notified
+Accumulated Wait Time: 175122 us
+Buffer State: (3,4,1,2,3)
+Load Order: (0,2,0,0,1)
+Accumulated counter: 2
+0
+175122
+Updated Buffer State: (3,5,1,2,3)
+Updated Load Order: (0,1,0,0,1)
+
+Current Time: 673864073 us
+Iteration: 3
+Part Worker ID: 5
+Status: Wakeup-Timeout
+Accumulated Wait Time: 175122 us
+Buffer State: (3,3,0,2,1)
+Load Order: (0,1,0,0,1)
+Accumulated counter: 3
+0
+175122
+0
+Updated Buffer State: (3,3,0,2,1)
+Updated Load Order: (0,1,0,0,1)
+
+Current Time: 673865185 us
+Iteration: 5
+Part Worker ID: 11
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (3,3,0,2,1)
+Load Order: (2,1,0,2,0)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,4,0,3,1)
+Updated Load Order: (0,0,0,1,0)
+
+Current Time: 673879908 us
+Iteration: 5
+Part Worker ID: 18
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (4,3,0,0,1)
+Load Order: (1,0,0,2,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,3,0,2,3)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673881398 us
+Iteration: 3
+Part Worker ID: 2
+Status: Wakeup-Notified
+Accumulated Wait Time: 170998 us
+Buffer State: (5,3,0,2,3)
+Load Order: (0,1,0,0,2)
+Accumulated counter: 2
+0
+170998
+Updated Buffer State: (5,4,0,2,3)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 673883230 us
+Iteration: 3
+Part Worker ID: 19
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (5,4,0,2,3)
+Load Order: (1,1,1,1,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,5,1,3,3)
+Updated Load Order: (1,0,0,0,1)
+
+Current Time: 673883917 us
+Iteration: 3
+Part Worker ID: 13
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (5,5,1,3,3)
+Load Order: (3,0,1,0,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,5,2,3,3)
+Updated Load Order: (3,0,0,0,1)
+
+Current Time: 673896046 us
+Iteration: 2
+Part Worker ID: 12
+Status: Wakeup-Timeout
+Accumulated Wait Time: 246094 us
+Buffer State: (5,5,0,2,3)
+Load Order: (0,0,0,4,0)
+Accumulated counter: 2
+0
+246094
+Updated Buffer State: (4,4,0,2,3)
+Updated Load Order: (0,0,0,4,0)
+
+Current Time: 673902073 us
+Iteration: 3
+Part Worker ID: 2
+Status: Wakeup-Timeout
+Accumulated Wait Time: 170998 us
+Buffer State: (4,4,0,2,3)
+Load Order: (0,0,0,0,2)
+Accumulated counter: 3
+0
+170998
+0
+Updated Buffer State: (4,4,0,2,3)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 673903659 us
+Iteration: 4
+Part Worker ID: 20
+Status: Wakeup-Timeout
+Accumulated Wait Time: 270886 us
+Buffer State: (4,4,0,2,3)
+Load Order: (0,0,0,2,2)
+Accumulated counter: 2
+0
+270886
+Updated Buffer State: (4,4,0,2,3)
+Updated Load Order: (0,0,0,2,2)
+
+Current Time: 673911741 us
+Iteration: 3
+Part Worker ID: 14
+Status: New Load Order
+Accumulated Wait Time: 27055 us
+Buffer State: (4,4,0,2,3)
+Load Order: (0,1,0,0,4)
+Accumulated counter: 1
+27055
+Updated Buffer State: (4,5,0,2,3)
+Updated Load Order: (0,0,0,0,4)
+
+Current Time: 673927557 us
+Iteration: 5
+Part Worker ID: 20
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (3,3,0,0,3)
+Load Order: (0,1,0,2,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (3,4,0,2,3)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 673931897 us
+Iteration: 3
+Part Worker ID: 17
+Status: Wakeup-Notified
+Accumulated Wait Time: 284716 us
+Buffer State: (3,4,0,2,3)
+Load Order: (0,1,0,0,2)
+Accumulated counter: 2
+0
+284716
+Updated Buffer State: (3,5,0,2,3)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 673934101 us
+Iteration: 3
+Part Worker ID: 10
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (3,5,0,2,3)
+Load Order: (0,2,1,2,0)
+Accumulated counter: 1
+0
+Updated Buffer State: (3,5,1,3,3)
+Updated Load Order: (0,2,0,1,0)
+
+Current Time: 673942684 us
+Iteration: 3
+Part Worker ID: 17
+Status: Wakeup-Timeout
+Accumulated Wait Time: 284716 us
+Buffer State: (2,5,0,2,0)
+Load Order: (0,0,0,0,2)
+Accumulated counter: 3
+0
+284716
+0
+Updated Buffer State: (2,5,0,2,0)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 673958786 us
+Iteration: 3
+Part Worker ID: 16
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (2,5,0,2,0)
+Load Order: (1,2,1,0,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (3,5,1,2,1)
+Updated Load Order: (0,2,0,0,0)
+
+Current Time: 673974817 us
+Iteration: 4
+Part Worker ID: 17
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (3,4,0,2,0)
+Load Order: (0,0,1,0,4)
+Accumulated counter: 1
+0
+Updated Buffer State: (3,4,1,2,3)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 673977527 us
+Iteration: 5
+Part Worker ID: 1
+Status: Wakeup-Notified
+Accumulated Wait Time: 269362 us
+Buffer State: (3,4,1,2,3)
+Load Order: (0,1,0,0,0)
+Accumulated counter: 2
+0
+269362
+Updated Buffer State: (3,5,1,2,3)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673990280 us
+Iteration: 2
+Part Worker ID: 8
+Status: Wakeup-Timeout
+Accumulated Wait Time: 385445 us
+Buffer State: (2,5,0,2,0)
+Load Order: (0,0,0,0,2)
+Accumulated counter: 2
+0
+385445
+Updated Buffer State: (2,5,0,2,0)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 673991068 us
+Iteration: 3
+Part Worker ID: 19
+Status: Wakeup-Notified
+Accumulated Wait Time: 106385 us
+Buffer State: (2,5,0,2,0)
+Load Order: (1,0,0,0,1)
+Accumulated counter: 2
+0
+106385
+Updated Buffer State: (3,5,0,2,1)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 673991735 us
+Iteration: 3
+Part Worker ID: 6
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (3,5,0,2,1)
+Load Order: (1,0,0,1,3)
+Accumulated counter: 1
+0
+Updated Buffer State: (4,5,0,3,3)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 673992449 us
+Iteration: 3
+Part Worker ID: 13
+Status: Wakeup-Notified
+Accumulated Wait Time: 107776 us
+Buffer State: (4,5,0,3,3)
+Load Order: (3,0,0,0,1)
+Accumulated counter: 2
+0
+107776
+Updated Buffer State: (5,5,0,3,3)
+Updated Load Order: (2,0,0,0,1)
+
+Current Time: 674007356 us
+Iteration: 3
+Part Worker ID: 13
+Status: Wakeup-Timeout
+Accumulated Wait Time: 107776 us
+Buffer State: (4,4,0,3,0)
+Load Order: (2,0,0,0,1)
+Accumulated counter: 3
+0
+107776
+0
+Updated Buffer State: (4,4,0,3,0)
+Updated Load Order: (2,0,0,0,1)
+
+Current Time: 674021529 us
+Iteration: 4
+Part Worker ID: 19
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (4,4,0,3,0)
+Load Order: (0,0,1,2,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (4,4,1,3,2)
+Updated Load Order: (0,0,0,2,0)
+
+Current Time: 674023427 us
+Iteration: 3
+Part Worker ID: 14
+Status: Wakeup-Notified
+Accumulated Wait Time: 27055 us
+Buffer State: (4,4,1,3,2)
+Load Order: (0,0,0,0,4)
+Accumulated counter: 2
+27055
+0
+Updated Buffer State: (4,4,1,3,3)
+Updated Load Order: (0,0,0,0,3)
+
+Current Time: 674024324 us
+Iteration: 4
+Part Worker ID: 2
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (4,4,1,3,3)
+Load Order: (0,0,3,0,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (4,4,4,3,3)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 674037619 us
+Iteration: 3
+Part Worker ID: 14
+Status: Wakeup-Timeout
+Accumulated Wait Time: 27055 us
+Buffer State: (1,4,3,2,3)
+Load Order: (0,0,0,0,3)
+Accumulated counter: 3
+27055
+0
+0
+Updated Buffer State: (1,4,3,2,3)
+Updated Load Order: (0,0,0,0,3)
+
+Current Time: 674039127 us
+Iteration: 4
+Part Worker ID: 13
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (1,4,3,2,3)
+Load Order: (2,1,1,0,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (3,5,4,2,3)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 674053556 us
+Iteration: 5
+Part Worker ID: 20
+Status: Wakeup-Timeout
+Accumulated Wait Time: 108532 us
+Buffer State: (3,5,3,2,3)
+Load Order: (0,0,0,0,2)
+Accumulated counter: 2
+0
+108532
+Updated Buffer State: (3,5,3,2,3)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 674056911 us
+Iteration: 4
+Part Worker ID: 4
+Status: Wakeup-Notified
+Accumulated Wait Time: 393588 us
+Buffer State: (3,5,3,2,3)
+Load Order: (0,0,0,1,3)
+Accumulated counter: 2
+0
+393588
+Updated Buffer State: (3,5,3,3,3)
+Updated Load Order: (0,0,0,0,3)
+
+Current Time: 674069493 us
+Iteration: 4
+Part Worker ID: 4
+Status: Wakeup-Timeout
+Accumulated Wait Time: 393588 us
+Buffer State: (3,5,2,3,3)
+Load Order: (0,0,0,0,3)
+Accumulated counter: 3
+0
+393588
+0
+Updated Buffer State: (3,5,2,3,3)
+Updated Load Order: (0,0,0,0,3)
+
+Current Time: 674070340 us
+Iteration: 4
+Part Worker ID: 14
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (3,5,2,3,3)
+Load Order: (1,0,0,1,3)
+Accumulated counter: 1
+0
+Updated Buffer State: (4,5,2,3,3)
+Updated Load Order: (0,0,0,1,3)
+
+Current Time: 674086063 us
+Iteration: 5
+Part Worker ID: 11
+Status: Wakeup-Notified
+Accumulated Wait Time: 219753 us
+Buffer State: (2,5,2,2,1)
+Load Order: (0,0,0,1,0)
+Accumulated counter: 2
+0
+219753
+Current Time: 674101516 us
+Iteration: 5
+Part Worker ID: 4
+Status: New Load Order
+Accumulated Wait Time: 1 us
+Buffer State: (3,5,0,2,3)
+Load Order: (1,0,0,0,4)
+Accumulated counter: 1
+1
+Updated Buffer State: (4,5,0,2,3)
+Updated Load Order: (0,0,0,0,4)
+
+Current Time: 674116955 us
+Iteration: 5
+Part Worker ID: 17
+Status: New Load Order
+Accumulated Wait Time: 9 us
+Buffer State: (4,5,0,1,3)
+Load Order: (4,0,0,0,1)
+Accumulated counter: 1
+9
+Updated Buffer State: (5,5,0,1,3)
+Updated Load Order: (3,0,0,0,1)
+
+Current Time: 674119033 us
+Iteration: 3
+Part Worker ID: 12
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (5,5,0,1,3)
+Load Order: (0,1,0,4,0)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,5,0,3,3)
+Updated Load Order: (0,1,0,2,0)
+
+Current Time: 674131856 us
+Iteration: 4
+Part Worker ID: 19
+Status: Wakeup-Timeout
+Accumulated Wait Time: 97153 us
+Buffer State: (2,4,0,3,2)
+Load Order: (0,0,0,2,0)
+Accumulated counter: 2
+0
+97153
+Updated Buffer State: (2,4,0,3,2)
+Updated Load Order: (0,0,0,2,0)
+
+Current Time: 674137576 us
+Iteration: 4
+Part Worker ID: 2
+Status: Wakeup-Notified
+Accumulated Wait Time: 106740 us
+Buffer State: (2,4,0,3,2)
+Load Order: (0,0,0,0,2)
+Accumulated counter: 2
+0
+106740
+Updated Buffer State: (2,4,0,3,3)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 674142355 us
+Iteration: 4
+Part Worker ID: 5
+Status: Wakeup-Timeout
+Accumulated Wait Time: 218513 us
+Buffer State: (2,4,0,3,3)
+Load Order: (2,2,0,0,1)
+Accumulated counter: 1
+218513
+Updated Buffer State: (2,4,0,3,3)
+Updated Load Order: (2,2,0,0,1)
+
+Current Time: 674143133 us
+Iteration: 3
+Part Worker ID: 10
+Status: Wakeup-Notified
+Accumulated Wait Time: 207445 us
+Buffer State: (2,4,0,3,3)
+Load Order: (0,2,0,1,0)
+Accumulated counter: 2
+0
+207445
+Updated Buffer State: (2,5,0,3,3)
+Updated Load Order: (0,1,0,1,0)
+
+Current Time: 674147588 us
+Iteration: 4
+Part Worker ID: 14
+Status: Wakeup-Timeout
+Accumulated Wait Time: 72272 us
+Buffer State: (1,4,0,0,2)
+Load Order: (0,0,0,1,3)
+Accumulated counter: 2
+0
+72272
+Updated Buffer State: (1,4,0,0,2)
+Updated Load Order: (0,0,0,1,3)
+
+Current Time: 674149793 us
+Iteration: 4
+Part Worker ID: 13
+Status: Wakeup-Timeout
+Accumulated Wait Time: 103433 us
+Buffer State: (1,4,0,0,2)
+Load Order: (0,0,0,0,1)
+Accumulated counter: 2
+0
+103433
+Updated Buffer State: (1,4,0,0,2)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 674150709 us
+Iteration: 3
+Part Worker ID: 10
+Status: Wakeup-Timeout
+Accumulated Wait Time: 207445 us
+Buffer State: (1,4,0,0,2)
+Load Order: (0,1,0,1,0)
+Accumulated counter: 3
+0
+207445
+0
+Updated Buffer State: (1,4,0,0,2)
+Updated Load Order: (0,1,0,1,0)
+
+Current Time: 674151912 us
+Iteration: 2
+Part Worker ID: 9
+Status: Wakeup-Timeout
+Accumulated Wait Time: 578035 us
+Buffer State: (1,4,0,0,2)
+Load Order: (0,0,0,0,1)
+Accumulated counter: 2
+0
+578035
+Updated Buffer State: (1,4,0,0,2)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 674152854 us
+Iteration: 4
+Part Worker ID: 2
+Status: Wakeup-Timeout
+Accumulated Wait Time: 106740 us
+Buffer State: (1,4,0,0,2)
+Load Order: (0,0,0,0,1)
+Accumulated counter: 3
+0
+106740
+0
+Updated Buffer State: (1,4,0,0,2)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 674153929 us
+Iteration: 3
+Part Worker ID: 16
+Status: Wakeup-Timeout
+Accumulated Wait Time: 183060 us
+Buffer State: (1,4,0,0,2)
+Load Order: (0,2,0,0,0)
+Accumulated counter: 2
+0
+183060
+Updated Buffer State: (1,4,0,0,2)
+Updated Load Order: (0,2,0,0,0)
+
+Current Time: 674162948 us
+Iteration: 5
+Part Worker ID: 19
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (1,4,0,0,2)
+Load Order: (0,1,0,2,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (1,5,0,2,3)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 674178362 us
+Iteration: 3
+Part Worker ID: 8
+Status: New Load Order
+Accumulated Wait Time: 2 us
+Buffer State: (0,2,0,2,3)
+Load Order: (1,0,2,0,2)
+Accumulated counter: 1
+2
+Updated Buffer State: (1,2,2,2,3)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 674193454 us
+Iteration: 4
+Part Worker ID: 15
+Status: Wakeup-Timeout
+Accumulated Wait Time: 375713 us
+Buffer State: (0,2,0,0,2)
+Load Order: (0,0,0,0,1)
+Accumulated counter: 2
+0
+375713
+Updated Buffer State: (0,2,0,0,2)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 674195411 us
+Iteration: 5
+Part Worker ID: 4
+Status: Wakeup-Timeout
+Accumulated Wait Time: 73466 us
+Buffer State: (0,2,0,0,2)
+Load Order: (0,0,0,0,4)
+Accumulated counter: 2
+1
+73465
+Updated Buffer State: (0,2,0,0,2)
+Updated Load Order: (0,0,0,0,4)
+
+Current Time: 674208557 us
+Iteration: 5
+Part Worker ID: 5
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (0,2,0,0,2)
+Load Order: (2,2,0,0,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (2,4,0,0,3)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 674224656 us
+Iteration: 5
+Part Worker ID: 15
+Status: New Load Order
+Accumulated Wait Time: 2 us
+Buffer State: (2,3,0,0,1)
+Load Order: (1,0,1,1,2)
+Accumulated counter: 1
+2
+Updated Buffer State: (3,3,1,1,3)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 674256267 us
+Iteration: 5
+Part Worker ID: 19
+Status: Wakeup-Notified
+Accumulated Wait Time: 79903 us
+Buffer State: (3,3,0,1,2)
+Load Order: (0,0,0,0,1)
+Accumulated counter: 2
+0
+79903
+Updated Buffer State: (3,3,0,1,3)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 674257673 us
+Iteration: 5
+Part Worker ID: 14
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (3,3,0,1,3)
+Load Order: (0,0,0,1,4)
+Accumulated counter: 1
+0
+Updated Buffer State: (3,3,0,2,3)
+Updated Load Order: (0,0,0,0,4)
+
+Current Time: 674258505 us
+Iteration: 5
+Part Worker ID: 13
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (3,3,0,2,3)
+Load Order: (1,0,2,0,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (4,3,2,2,3)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 674259274 us
+Iteration: 3
+Part Worker ID: 9
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (4,3,2,2,3)
+Load Order: (3,0,0,0,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,3,2,2,3)
+Updated Load Order: (2,0,0,0,2)
+
+Current Time: 674259922 us
+Iteration: 5
+Part Worker ID: 2
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (5,3,2,2,3)
+Load Order: (0,1,1,0,3)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,4,3,2,3)
+Updated Load Order: (0,0,0,0,3)
+
+Current Time: 674271875 us
+Iteration: 5
+Part Worker ID: 17
+Status: Wakeup-Notified
+Accumulated Wait Time: 153135 us
+Buffer State: (3,4,2,2,1)
+Load Order: (3,0,0,0,1)
+Accumulated counter: 2
+9
+153126
+Updated Buffer State: (5,4,2,2,2)
+Updated Load Order: (1,0,0,0,0)
+
+Current Time: 674276581 us
+Iteration: 3
+Part Worker ID: 8
+Status: Wakeup-Notified
+Accumulated Wait Time: 97330 us
+Buffer State: (5,4,2,2,2)
+Load Order: (0,0,0,0,2)
+Accumulated counter: 2
+2
+97328
+Updated Buffer State: (5,4,2,2,3)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 674287763 us
+Iteration: 3
+Part Worker ID: 8
+Status: Wakeup-Timeout
+Accumulated Wait Time: 97330 us
+Buffer State: (5,4,1,2,2)
+Load Order: (0,0,0,0,1)
+Accumulated counter: 3
+2
+97328
+0
+Updated Buffer State: (5,4,1,2,2)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 674289417 us
+Iteration: 5
+Part Worker ID: 17
+Status: Wakeup-Timeout
+Accumulated Wait Time: 153135 us
+Buffer State: (5,4,1,2,2)
+Load Order: (1,0,0,0,0)
+Accumulated counter: 3
+9
+153126
+0
+Updated Buffer State: (5,4,1,2,2)
+Updated Load Order: (1,0,0,0,0)
+
+Current Time: 674335393 us
+Iteration: 3
+Part Worker ID: 6
+Status: Wakeup-Notified
+Accumulated Wait Time: 342947 us
+Buffer State: (5,4,0,0,2)
+Load Order: (0,0,0,0,1)
+Accumulated counter: 2
+0
+342947
+Updated Buffer State: (5,4,0,0,3)
+Updated Load Order: (0,0,0,0,0)
+
+Current Time: 674351744 us
+Iteration: 4
+Part Worker ID: 10
+Status: New Load Order
+Accumulated Wait Time: 1 us
+Buffer State: (3,2,0,0,3)
+Load Order: (1,1,0,2,1)
+Accumulated counter: 1
+1
+Updated Buffer State: (4,3,0,2,3)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 674366567 us
+Iteration: 4
+Part Worker ID: 6
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (4,3,0,1,3)
+Load Order: (2,2,0,0,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,5,0,1,3)
+Updated Load Order: (1,0,0,0,1)
+
+Current Time: 674367973 us
+Iteration: 3
+Part Worker ID: 12
+Status: Wakeup-Notified
+Accumulated Wait Time: 247527 us
+Buffer State: (5,5,0,1,3)
+Load Order: (0,1,0,2,0)
+Accumulated counter: 2
+0
+247527
+Updated Buffer State: (5,5,0,3,3)
+Updated Load Order: (0,1,0,0,0)
+
+Current Time: 674382485 us
+Iteration: 5
+Part Worker ID: 2
+Status: Wakeup-Timeout
+Accumulated Wait Time: 109138 us
+Buffer State: (5,3,0,1,3)
+Load Order: (0,0,0,0,3)
+Accumulated counter: 2
+0
+109138
+Updated Buffer State: (5,3,0,1,3)
+Updated Load Order: (0,0,0,0,3)
+
+Current Time: 674384175 us
+Iteration: 3
+Part Worker ID: 7
+Status: Wakeup-Timeout
+Accumulated Wait Time: 276917 us
+Buffer State: (5,3,0,1,3)
+Load Order: (0,1,0,2,0)
+Accumulated counter: 2
+1
+276916
+Updated Buffer State: (5,3,0,1,3)
+Updated Load Order: (0,1,0,2,0)
+
+Current Time: 674386145 us
+Iteration: 3
+Part Worker ID: 12
+Status: Wakeup-Timeout
+Accumulated Wait Time: 247527 us
+Buffer State: (5,3,0,1,3)
+Load Order: (0,1,0,0,0)
+Accumulated counter: 3
+0
+247527
+0
+Updated Buffer State: (5,3,0,1,3)
+Updated Load Order: (0,1,0,0,0)
+
+Current Time: 674387620 us
+Iteration: 5
+Part Worker ID: 13
+Status: Wakeup-Timeout
+Accumulated Wait Time: 110495 us
+Buffer State: (5,3,0,1,3)
+Load Order: (0,0,0,0,2)
+Accumulated counter: 2
+0
+110495
+Updated Buffer State: (5,3,0,1,3)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 674388292 us
+Iteration: 3
+Part Worker ID: 9
+Status: Wakeup-Timeout
+Accumulated Wait Time: 109848 us
+Buffer State: (5,3,0,1,3)
+Load Order: (2,0,0,0,2)
+Accumulated counter: 2
+0
+109848
+Updated Buffer State: (5,3,0,1,3)
+Updated Load Order: (2,0,0,0,2)
+
+Current Time: 674397942 us
+Iteration: 4
+Part Worker ID: 16
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (5,3,0,1,3)
+Load Order: (0,2,0,1,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,5,0,2,3)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 674413980 us
+Iteration: 4
+Part Worker ID: 7
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (5,5,0,1,3)
+Load Order: (0,2,1,2,0)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,5,1,3,3)
+Updated Load Order: (0,2,0,0,0)
+
+Current Time: 674444854 us
+Iteration: 4
+Part Worker ID: 8
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (2,4,0,3,3)
+Load Order: (2,1,0,0,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (4,5,0,3,3)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 674446438 us
+Iteration: 4
+Part Worker ID: 9
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (4,5,0,3,3)
+Load Order: (2,0,1,0,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,5,1,3,3)
+Updated Load Order: (1,0,0,0,2)
+
+Current Time: 674460032 us
+Iteration: 5
+Part Worker ID: 14
+Status: Wakeup-Timeout
+Accumulated Wait Time: 188650 us
+Buffer State: (5,5,1,2,2)
+Load Order: (0,0,0,0,4)
+Accumulated counter: 2
+0
+188650
+Updated Buffer State: (5,5,1,2,2)
+Updated Load Order: (0,0,0,0,4)
+
+Current Time: 674462241 us
+Iteration: 4
+Part Worker ID: 7
+Status: Wakeup-Timeout
+Accumulated Wait Time: 32156 us
+Buffer State: (5,5,1,2,2)
+Load Order: (0,2,0,0,0)
+Accumulated counter: 2
+0
+32156
+Updated Buffer State: (5,5,1,2,2)
+Updated Load Order: (0,2,0,0,0)
+
+Current Time: 674463206 us
+Iteration: 4
+Part Worker ID: 10
+Status: Wakeup-Timeout
+Accumulated Wait Time: 88795 us
+Buffer State: (5,5,1,2,2)
+Load Order: (0,0,0,0,1)
+Accumulated counter: 2
+1
+88794
+Updated Buffer State: (5,5,1,2,2)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 674464331 us
+Iteration: 4
+Part Worker ID: 16
+Status: Wakeup-Timeout
+Accumulated Wait Time: 45850 us
+Buffer State: (5,5,1,2,2)
+Load Order: (0,0,0,0,2)
+Accumulated counter: 2
+0
+45850
+Updated Buffer State: (5,5,1,2,2)
+Updated Load Order: (0,0,0,0,2)
+
+Current Time: 674491684 us
+Iteration: 4
+Part Worker ID: 12
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (3,5,0,2,2)
+Load Order: (2,1,1,1,0)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,5,1,3,2)
+Updated Load Order: (0,1,0,0,0)
+
+Current Time: 674492732 us
+Iteration: 4
+Part Worker ID: 8
+Status: Wakeup-Notified
+Accumulated Wait Time: 46343 us
+Buffer State: (5,5,1,3,2)
+Load Order: (0,0,0,0,2)
+Accumulated counter: 2
+0
+46343
+Updated Buffer State: (5,5,1,3,3)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 674507722 us
+Iteration: 4
+Part Worker ID: 9
+Status: Wakeup-Timeout
+Accumulated Wait Time: 46618 us
+Buffer State: (3,3,1,3,2)
+Load Order: (1,0,0,0,2)
+Accumulated counter: 2
+0
+46618
+Updated Buffer State: (3,3,1,3,2)
+Updated Load Order: (1,0,0,0,2)
+
+Current Time: 674509177 us
+Iteration: 5
+Part Worker ID: 10
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (3,3,1,3,2)
+Load Order: (0,0,2,2,1)
+Accumulated counter: 1
+0
+Updated Buffer State: (3,3,3,3,3)
+Updated Load Order: (0,0,0,2,0)
+
+Current Time: 674510525 us
+Iteration: 4
+Part Worker ID: 8
+Status: Wakeup-Timeout
+Accumulated Wait Time: 46343 us
+Buffer State: (3,3,3,3,3)
+Load Order: (0,0,0,0,1)
+Accumulated counter: 3
+0
+46343
+0
+Updated Buffer State: (3,3,3,3,3)
+Updated Load Order: (0,0,0,0,1)
+
+Current Time: 674516427 us
+Iteration: 5
+Part Worker ID: 7
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (3,3,3,3,3)
+Load Order: (1,2,1,1,0)
+Accumulated counter: 1
+0
+Updated Buffer State: (4,5,4,3,3)
+Updated Load Order: (0,0,0,1,0)
+
+Current Time: 674539693 us
+Iteration: 5
+Part Worker ID: 16
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (4,5,1,3,3)
+Load Order: (2,0,0,1,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,5,1,3,3)
+Updated Load Order: (1,0,0,1,2)
+
+Current Time: 674555592 us
+Iteration: 4
+Part Worker ID: 12
+Status: Wakeup-Timeout
+Accumulated Wait Time: 46958 us
+Buffer State: (2,5,0,3,2)
+Load Order: (0,1,0,0,0)
+Accumulated counter: 2
+0
+46958
+Updated Buffer State: (2,5,0,3,2)
+Updated Load Order: (0,1,0,0,0)
+
+Current Time: 674571479 us
+Iteration: 5
+Part Worker ID: 10
+Status: Wakeup-Timeout
+Accumulated Wait Time: 45182 us
+Buffer State: (2,5,0,3,2)
+Load Order: (0,0,0,2,0)
+Accumulated counter: 2
+0
+45182
+Updated Buffer State: (2,5,0,3,2)
+Updated Load Order: (0,0,0,2,0)
+
+Current Time: 674574130 us
+Iteration: 4
+Part Worker ID: 6
+Status: Wakeup-Timeout
+Accumulated Wait Time: 187654 us
+Buffer State: (2,5,0,3,2)
+Load Order: (1,0,0,0,1)
+Accumulated counter: 2
+0
+187654
+Updated Buffer State: (2,5,0,3,2)
+Updated Load Order: (1,0,0,0,1)
+
+Current Time: 674575298 us
+Iteration: 5
+Part Worker ID: 7
+Status: Wakeup-Timeout
+Accumulated Wait Time: 37779 us
+Buffer State: (2,5,0,3,2)
+Load Order: (0,0,0,1,0)
+Accumulated counter: 2
+0
+37779
+Updated Buffer State: (2,5,0,3,2)
+Updated Load Order: (0,0,0,1,0)
+
+Current Time: 674576203 us
+Iteration: 5
+Part Worker ID: 9
+Status: New Load Order
+Accumulated Wait Time: 15857 us
+Buffer State: (2,5,0,3,2)
+Load Order: (1,1,0,1,2)
+Accumulated counter: 1
+15857
+Updated Buffer State: (3,5,0,3,3)
+Updated Load Order: (0,1,0,1,1)
+
+Current Time: 674576899 us
+Iteration: 5
+Part Worker ID: 16
+Status: Wakeup-Notified
+Accumulated Wait Time: 34668 us
+Buffer State: (3,5,0,3,3)
+Load Order: (1,0,0,1,2)
+Accumulated counter: 2
+0
+34668
+Updated Buffer State: (4,5,0,3,3)
+Updated Load Order: (0,0,0,1,2)
+
+Current Time: 674587156 us
+Iteration: 5
+Part Worker ID: 16
+Status: Wakeup-Timeout
+Accumulated Wait Time: 34668 us
+Buffer State: (4,4,0,2,0)
+Load Order: (0,0,0,1,2)
+Accumulated counter: 3
+0
+34668
+0
+Updated Buffer State: (4,4,0,2,0)
+Updated Load Order: (0,0,0,1,2)
+
+Current Time: 674588409 us
+Iteration: 5
+Part Worker ID: 12
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (4,4,0,2,0)
+Load Order: (1,1,1,2,0)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,5,1,3,0)
+Updated Load Order: (0,0,0,1,0)
+
+Current Time: 674589318 us
+Iteration: 5
+Part Worker ID: 9
+Status: Wakeup-Notified
+Accumulated Wait Time: 28300 us
+Buffer State: (5,5,1,3,0)
+Load Order: (0,1,0,1,1)
+Accumulated counter: 2
+15857
+12443
+Updated Buffer State: (5,5,1,3,1)
+Updated Load Order: (0,1,0,1,0)
+
+Current Time: 674603107 us
+Iteration: 5
+Part Worker ID: 9
+Status: Wakeup-Timeout
+Accumulated Wait Time: 28300 us
+Buffer State: (5,5,0,3,1)
+Load Order: (0,1,0,1,0)
+Accumulated counter: 3
+15857
+12443
+0
+Updated Buffer State: (5,5,0,3,1)
+Updated Load Order: (0,1,0,1,0)
+
+Current Time: 674604707 us
+Iteration: 5
+Part Worker ID: 6
+Status: New Load Order
+Accumulated Wait Time: 0 us
+Buffer State: (5,5,0,3,1)
+Load Order: (1,0,0,2,2)
+Accumulated counter: 1
+0
+Updated Buffer State: (5,5,0,3,3)
+Updated Load Order: (1,0,0,2,0)
+
+Current Time: 674619212 us
+Iteration: 5
+Part Worker ID: 8
+Status: Wakeup-Timeout
+Accumulated Wait Time: 49724 us
+Buffer State: (5,5,0,3,3)
+Load Order: (1,2,0,1,1)
+Accumulated counter: 1
+49724
+Current Time: 674634782 us
+Iteration: 5
+Part Worker ID: 12
+Status: Wakeup-Timeout
+Accumulated Wait Time: 30055 us
+Buffer State: (3,3,0,2,3)
+Load Order: (0,0,0,1,0)
+Accumulated counter: 2
+0
+30055
+Updated Buffer State: (3,3,0,2,3)
+Updated Load Order: (0,0,0,1,0)
+
+Current Time: 674637177 us
+Iteration: 5
+Part Worker ID: 6
+Status: Wakeup-Notified
+Accumulated Wait Time: 29473 us
+Buffer State: (3,3,0,2,3)
+Load Order: (1,0,0,2,0)
+Accumulated counter: 2
+0
+29473
+Updated Buffer State: (4,3,0,3,3)
+Updated Load Order: (0,0,0,1,0)
+
+Current Time: 674650728 us
+Iteration: 5
+Part Worker ID: 6
+Status: Wakeup-Timeout
+Accumulated Wait Time: 29473 us
+Buffer State: (4,3,0,3,3)
+Load Order: (0,0,0,1,0)
+Accumulated counter: 3
+0
+29473
+0
+Updated Buffer State: (4,3,0,3,3)
+Updated Load Order: (0,0,0,1,0)
+
