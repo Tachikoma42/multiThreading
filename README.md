@@ -42,7 +42,6 @@ This repository contains various projects programmed using C++ thread library. T
 - [C++11/14/17/20 std::future - cppreference.com](https://en.cppreference.com/w/cpp/thread/future)
 - [C++11/14/17/20 std::promise - cppreference.com](https://en.cppreference.com/w/cpp/thread/promise)
 - [C++11/14/17/20 std::packaged_task - cppreference.com](https://en.cppreference.com/w/cpp/thread/packaged_task)
-- [C++11/14/17/20 std::thread::hardware_concurrency - cppreference.com](https://en.cppreference.com/w/cpp/thread/thread/hardware_concurrency)
 - [C++11/14/17/20 std::this_thread::sleep_for - cppreference.com](https://en.cppreference.com/w/cpp/thread/sleep_for)
 - [C++11/14/17/20 std::this_thread::sleep_until - cppreference.com](https://en.cppreference.com/w/cpp/thread/sleep_until)
 
