@@ -7,27 +7,28 @@ This repository contains various projects programmed using C++ thread library. T
 
 ## Environment
 - Windows 10
-- Visual Studio 2022
+- Clion 2021.2.3
+- Visual Studio 2022 as compiler
 - C++ 14 (and some features of C++ 17)
 
 ## Projects
-- [x] [Matrix Multiplication]()
+- [x] [Matrix Multiplication](https://github.com/Tachikoma42/multiThreading/tree/main/Matrix%20Multiplication)
     - This project calculate the multiplication of two matrix using C++ thread library.
 - [x] [Bitonic Sort](https://github.com/Tachikoma42/multiThreading/tree/main/bitonicSort)
     - This project sort an array using bitonic sort algorithm.
     - Algorithm: [Bitonic Sort](https://en.wikipedia.org/wiki/Bitonic_sorter)
     - This algorithm is easy to parallelize.
-- [x] [Fast Fourier transform]()
+- [x] [Fast Fourier transform](https://github.com/Tachikoma42/multiThreading/tree/main/FFT)
     - This project calculate the discrete fast fourier transform of an array.
     - Algorithm: [Fast Fourier transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform) and [Butterfly diagram](https://en.wikipedia.org/wiki/Butterfly_diagram)
-- [x] [Producer-Consumer Problem]()
+- [x] [Producer-Consumer Problem](https://github.com/Tachikoma42/multiThreading/tree/main/ProductionSimulator/productionPlant)
     - This project simulates producer, consumer and product buffer using multithreading.
     - Problem: [Producer-Consumer Problem](https://en.wikipedia.org/wiki/Producer%E2%80%93consumer_problem)
     - Giving the speed of producer and consumer, and the size of buffer, the program will calculate how many product will be produced and consumed.
     - This program uses wait and notify to synchronize the producer and consumer.
 
 ## Usage
-- Open the solution file in Visual Studio
+- Open the solution file in Clion
 - Build the project
 - Run the project
 
